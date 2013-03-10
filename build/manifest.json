@@ -1,9 +1,9 @@
 {
 	"manifest_version": 2,
 
-	"name": "Right Tasks for Gmail™",
-	"description": "Adds your Google Tasks to the right-side in Gmail, like in Google Calendar.",
-	"version": "1.1.1",
+	"name": "RightTasks for Gmail™",
+	"description": "Adds your Google Tasks to the right side in Gmail, like in Google Calendar.",
+	"version": "1.1.2",
 	
 	"icons": {
 		"16": "gmail-righttasks-icon-16.png",
