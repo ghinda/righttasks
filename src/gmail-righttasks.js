@@ -8,14 +8,8 @@
 
 var rightTasks = function() {
 
-	var $body = document.body,
-		$tasksContainer,
-		$iframe = document.createElement('iframe'),
+	var $tasksContainer,
 		$mailContainer;
-		
-	// set iframe details
-	$iframe.src = 'https://mail.google.com/tasks/ig?pli=1';
-	$iframe.className = 'gmail-righttasks';
 	
 	var position = function() {
 		
@@ -26,6 +20,7 @@ var rightTasks = function() {
 		
 	};
 	
+	// trigger click events, as binded by Gmail
 	var triggerClick = function($element) {
 		
 		var evt1 = document.createEvent('MouseEvents');
@@ -38,6 +33,7 @@ var rightTasks = function() {
 		
 	};
 	
+	// find the tasks container added dynamically by Gmail
 	var findTasksContainer = function() {
 	
 		$tasksContainer = document.querySelector('.AD');
@@ -52,6 +48,7 @@ var rightTasks = function() {
 
 			var tasksIframe = document.getElementById('tasksiframe').contentDocument;
 
+			// get the dom of the tasks iframe
 			var getIframeDom = function() {
 
 				var html = tasksIframe.getElementsByTagName('html')[0];
@@ -70,16 +67,17 @@ var rightTasks = function() {
 					html.className += ' tasks-frame';
 				}
 
-				console.log(html.className.indexOf('tasks-frame'));
-
+				// check that the html elements exists and has the proper class
 				if(!html || html.className.indexOf('tasks-frame') === -1) {
-					setTimeout(getIframeDom, 100);
+					setTimeout(getIframeDom, 500);
 				}
 
 			}();
 
 		} else {
+			
 			setTimeout(findTasksContainer, 500);
+			
 		}
 		
 	};
@@ -97,10 +95,13 @@ var rightTasks = function() {
 		// give it some time to render the markup
 		setTimeout(function() {
 			
+			// get the tasks button from the mail dropdown
 			var $tasksButton = document.querySelector('.aki.pp .jQjAxd [role=menuitem]:nth-child(3)');
 			
+			// click the tasks button
 			triggerClick($tasksButton);
 			
+			// get the 
 			findTasksContainer();
 			
 		}, 10);
@@ -119,7 +120,7 @@ var rightTasks = function() {
 	
 }();
 
-// wait for the gmail ui to load
+// wait for the Gmail ui to load
 // http://anurag-maher.blogspot.ro/2012/12/developing-google-chrome-extension-for.html
 (function () {
 	var head;
