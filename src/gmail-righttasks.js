@@ -45,6 +45,39 @@ var rightTasks = function() {
 		if($tasksContainer) {
 			$tasksContainer.className += ' gmail-righttasks';
 			position();
+
+			$tasksContainer.parentNode.className += ' gmail-righttasks-container';
+
+			var cssURL = chrome.extension.getURL('gmail-righttasks.css');
+
+			var tasksIframe = document.getElementById('tasksiframe').contentDocument;
+
+			var getIframeDom = function() {
+
+				var html = tasksIframe.getElementsByTagName('html')[0];
+
+				if(html) {
+
+					var head = tasksIframe.getElementsByTagName('head')[0];
+					var cssnode = tasksIframe.createElement('link');
+
+					cssnode.type = 'text/css';
+					cssnode.rel = 'stylesheet';
+					cssnode.href = cssURL;
+
+					head.appendChild(cssnode);
+
+					html.className += ' tasks-frame';
+				}
+
+				console.log(html.className.indexOf('tasks-frame'));
+
+				if(!html || html.className.indexOf('tasks-frame') === -1) {
+					setTimeout(getIframeDom, 100);
+				}
+
+			}();
+
 		} else {
 			setTimeout(findTasksContainer, 500);
 		}
