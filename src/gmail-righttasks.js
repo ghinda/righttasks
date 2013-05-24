@@ -36,7 +36,22 @@ var rightTasks = function() {
 	// find the tasks container added dynamically by Gmail
 	var findTasksContainer = function() {
 	
-		$tasksContainer = document.querySelector('.AD');
+		var possibleContainers = document.querySelectorAll('.AD'),
+			possibleHeader,
+			i;
+
+		// find the tasks container, from all the .AD containers (the ones with the black titlebars)
+		// by searching through the titles
+		for(i = 0; i < possibleContainers.length; i++) {
+
+			possibleHeader = possibleContainers[i].querySelector('table .Hp');
+
+			if(possibleHeader && possibleHeader.innerHTML.indexOf('Tasks') !== -1) {
+				$tasksContainer = possibleContainers[i];
+				break;
+			}
+
+		}
 		
 		if($tasksContainer) {
 			$tasksContainer.className += ' gmail-righttasks';
