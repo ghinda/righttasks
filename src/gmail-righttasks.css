@@ -14,7 +14,7 @@
 	position: absolute !important;
 	bottom: 0 !important;
 	right: 0 !important;
-	z-index: 0;
+	z-index: -1;
 }
 
 .gmail-righttasks {
