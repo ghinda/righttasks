@@ -9,13 +9,18 @@
 var rightTasks = function() {
 
 	var $tasksContainer,
-		$mailContainer;
+		$mailContainer,
+		currentTopPosition,
+		lastTopPosition;
 	
 	var position = function() {
 		
+		currentTopPosition = $mailContainer.offsetTop;
+		
 		// set the widget top to match the main container top
-		if($tasksContainer) {
-			$tasksContainer.style.paddingTop = $mailContainer.offsetTop + 'px';
+		if($tasksContainer && currentTopPosition!== lastTopPosition) {
+			$tasksContainer.style.paddingTop = currentTopPosition + 'px';
+			lastTopPosition = currentTopPosition;
 		}
 		
 	};
@@ -66,10 +71,15 @@ var rightTasks = function() {
 			// get the dom of the tasks iframe
 			var getIframeDom = function() {
 
-				var html = tasksIframe.getElementsByTagName('html')[0];
+				var html = tasksIframe.getElementsByTagName('html')[0],
+					body = html.getElementsByTagName('body')[0];
 
-				if(html) {
-
+				// the tasks iframe seems to remove our styles and class
+				// probably because it renders a template after we do our thing.
+					
+				// so we check if the actual tasks iframe content has loaded
+				// by checking for a class on the body
+				if(body.className.indexOf('Dw') !== -1) {
 					var head = tasksIframe.getElementsByTagName('head')[0];
 					var cssnode = tasksIframe.createElement('link');
 
@@ -82,8 +92,8 @@ var rightTasks = function() {
 					html.className += ' tasks-frame';
 				}
 
-				// check that the html elements exists and has the proper class
-				if(!html || html.className.indexOf('tasks-frame') === -1) {
+				// check that the html has the proper class
+				if(html.className.indexOf('tasks-frame') === -1) {
 					setTimeout(getIframeDom, 500);
 				}
 
@@ -183,4 +193,8 @@ var rightTasks = function() {
 window.addEventListener('resize', function() {
 	rightTasks.position();
 });
+
+// check top position every 5 seconds
+// set position when the view type (compact, cozy, etc.) changes
+setInterval(rightTasks.position, 5000);
 
