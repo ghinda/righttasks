@@ -1,7 +1,7 @@
 
 ### 1.5 (June 8, 2013)
 
-* Check if the contents of the tasks iframe have loaded, by checking for a class on the body element inside it. This fixes the issue with the styles for the tasks iframe, making it's height fluid, were not applied.
+* Check if the contents of the tasks iframe have loaded, by checking for a class on the body element inside it. This fixes the issue with the styles in the tasks iframe (that are making it's height fluid) not being applied.
 * Check for the height of the top bars every 5s, to fix the issues caused by selecting a different layout (cozy, comfortable, etc.) without triggering the resize event.
 
 ### 1.4 (May 24, 2013)
