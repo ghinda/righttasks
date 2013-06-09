@@ -66,38 +66,49 @@ var rightTasks = function() {
 
 			var cssURL = chrome.extension.getURL('gmail-righttasks.css');
 
-			var tasksIframe = document.getElementById('tasksiframe').contentDocument;
+			var tasksIframe = document.getElementById('tasksiframe');
 
 			// get the dom of the tasks iframe
 			var getIframeDom = function() {
 
-				var html = tasksIframe.getElementsByTagName('html')[0],
-					body = html.getElementsByTagName('body')[0];
+				// check if the frame is fully loaded
+				if(tasksIframe.contentDocument.readyState === 'complete') {
+				
+					var html = tasksIframe.contentDocument.getElementsByTagName('html')[0],
+						body = html.getElementsByTagName('body')[0];
+						
+					// the tasks iframe seems to remove our styles and class
+					// probably because it renders a template after we do our thing.
+						
+					// so we check if the actual tasks iframe content has loaded
+					// by checking for a class on the body
+					if(body.className.indexOf('Dw') !== -1) {
+						var head = tasksIframe.contentDocument.getElementsByTagName('head')[0];
+						var cssnode = tasksIframe.contentDocument.createElement('link');
 
-				// the tasks iframe seems to remove our styles and class
-				// probably because it renders a template after we do our thing.
+						cssnode.type = 'text/css';
+						cssnode.rel = 'stylesheet';
+						cssnode.href = cssURL;
+
+						head.appendChild(cssnode);
+
+						html.className += ' tasks-frame';
+					}
+						
+					// check that the html has the proper class
+					if(html.className.indexOf('tasks-frame') === -1) {
+						setTimeout(getIframeDom, 500);
+					}
+				
+				} else {
 					
-				// so we check if the actual tasks iframe content has loaded
-				// by checking for a class on the body
-				if(body.className.indexOf('Dw') !== -1) {
-					var head = tasksIframe.getElementsByTagName('head')[0];
-					var cssnode = tasksIframe.createElement('link');
-
-					cssnode.type = 'text/css';
-					cssnode.rel = 'stylesheet';
-					cssnode.href = cssURL;
-
-					head.appendChild(cssnode);
-
-					html.className += ' tasks-frame';
-				}
-
-				// check that the html has the proper class
-				if(html.className.indexOf('tasks-frame') === -1) {
 					setTimeout(getIframeDom, 500);
+					
 				}
 
-			}();
+			};
+			
+			getIframeDom();
 
 		} else {
 			
