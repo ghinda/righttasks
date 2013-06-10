@@ -1,4 +1,8 @@
 
+### 1.7 (June 10, 2013)
+
+* Fix an issues with the settings dropdown being overlapped by the tasks iframe, caused by the "Boomerang for Gmail" extension.
+
 ### 1.6 (June 9, 2013)
 
 * Additional fixes for the fluid height styles in the tasks iframe still not being applied.

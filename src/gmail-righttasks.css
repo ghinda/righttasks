@@ -85,3 +85,9 @@
 	box-sizing: border-box;
 }
 
+/* Fix issue with the settings dropdown being under the tasks sidebar,
+ * caused by Boomerang extension.
+ */
+div.dw {
+	z-index: 2;
+}
