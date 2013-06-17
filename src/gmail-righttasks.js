@@ -96,11 +96,35 @@ var rightTasks = function() {
 					}
 						
 					// check that the html has the proper class
-					if(html.className.indexOf('tasks-frame') === -1) {
-						setTimeout(getIframeDom, 500);
+					if(html.className.indexOf('tasks-frame') !== -1) {
+						
+						// when the tasks widget is opened, it steals focus
+						// and gmail shortcuts stop working.
+						// to prevent this, we cancel the first focus event
+						var preventFocusStealing = function() {
+							// focus on the main window
+							window.focus();
+							
+							// remove focus prevention after first focus
+							tasksIframe.contentDocument.removeEventListener('focus', preventFocusStealing, true);
+						};
+						
+						tasksIframe.contentDocument.addEventListener('focus', preventFocusStealing, true);
+						
+						// disable esc key, so that we can't hide the tasks widget
+						tasksIframe.contentDocument.addEventListener('keydown', function (e) {
+							if(e.which === 27){
+								return false;
+							}
+							
+						});
+						
 					}
 				
-				} else {
+				}
+				
+				// if something is not right with the tasks iframe
+				if(tasksIframe.contentDocument.readyState !== 'complete' || !html || html.className.indexOf('tasks-frame') === -1) {
 					
 					setTimeout(getIframeDom, 500);
 					
@@ -141,6 +165,13 @@ var rightTasks = function() {
 			findTasksContainer();
 			
 		}, 10);
+		
+		// disable the ESC shortcut key, to prevent the tasks widget from being closed
+		document.addEventListener('keydown', function (e) {
+			if(e.which === 27){
+				return false;
+			}
+		});
 		
 		
 		// get the main gmail container

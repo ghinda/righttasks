@@ -1,4 +1,8 @@
 
+### 1.8 (June 17, 2013)
+
+* Add focus stealing prevention to the tasks widget, to prevent the tasks list from stealing focus on page load, and making Gmail shortcuts unusable without manually getting focus to the page.
+
 ### 1.7 (June 10, 2013)
 
 * Fix an issues with the settings dropdown being overlapped by the tasks iframe, caused by the "Boomerang for Gmail" extension.
