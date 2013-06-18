@@ -1,4 +1,8 @@
 
+### 1.9 (June 18, 2013)
+
+* Prevent the ESC shortcut key from closing the tasks widget. In case the widget is closed with the ESC key from inside the widget, it will reopen.
+
 ### 1.8 (June 17, 2013)
 
 * Add focus stealing prevention to the tasks widget, to prevent the tasks list from stealing focus on page load, and making Gmail shortcuts unusable without manually getting focus to the page.

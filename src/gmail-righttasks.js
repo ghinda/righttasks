@@ -111,13 +111,22 @@ var rightTasks = function() {
 						
 						tasksIframe.contentDocument.addEventListener('focus', preventFocusStealing, true);
 						
-						// disable esc key, so that we can't hide the tasks widget
-						tasksIframe.contentDocument.addEventListener('keydown', function (e) {
+						// capture the ESC keydown
+						tasksIframe.contentDocument.body.addEventListener('keydown', function (e) {
+							
 							if(e.which === 27){
+								// if ESC key pressed, the tasks widget will hide
+								// so we reopen it
+								rightTasks.init();
+								
+								// TODO find a way to actually prevent closing the widget
+								// with the ESC key
+								
 								return false;
 							}
 							
-						});
+						}, true);
+						
 						
 					}
 				
@@ -143,6 +152,10 @@ var rightTasks = function() {
 	};
 	
 	var init = function() {
+		
+		// cleanup vars
+		currentTopPosition = 0;
+		lastTopPosition = 1;
 		
 		var $mailButton = document.querySelector('.aki.pp > div');
 		
@@ -171,18 +184,24 @@ var rightTasks = function() {
 			if(e.which === 27){
 				return false;
 			}
-		});
+		}, false);
 		
 		
 		// get the main gmail container
 		$mailContainer = document.querySelector('.AO');
+		
+		// reposition the widget when the page resizes
+		window.addEventListener('resize', position);
+
+		// check top position every 5 seconds
+		// set position when the view type (compact, cozy, etc.) changes
+		setInterval(position, 5000);
 
 	};
 	
 	// reveal methods
 	return {
-		init: init,
-		position: position
+		init: init
 	}
 	
 }();
@@ -230,13 +249,4 @@ var rightTasks = function() {
 	};
 	waitForGmailToLoad();
 }());
-
-// reposition the widget when the page resizes
-window.addEventListener('resize', function() {
-	rightTasks.position();
-});
-
-// check top position every 5 seconds
-// set position when the view type (compact, cozy, etc.) changes
-setInterval(rightTasks.position, 5000);
 
