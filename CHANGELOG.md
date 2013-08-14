@@ -1,4 +1,8 @@
 
+### 2.0 (August 14, 2013)
+
+* Fix the extension not working if Gmail was set in a language other than English.
+
 ### 1.9 (June 18, 2013)
 
 * Prevent the ESC shortcut key from closing the tasks widget. In case the widget is closed with the ESC key from inside the widget, it will reopen.

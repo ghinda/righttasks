@@ -40,33 +40,23 @@ var rightTasks = function() {
 	
 	// find the tasks container added dynamically by Gmail
 	var findTasksContainer = function() {
-	
-		var possibleContainers = document.querySelectorAll('.AD'),
-			possibleHeader,
-			i;
 
-		// find the tasks container, from all the .AD containers (the ones with the black titlebars)
-		// by searching through the titles
-		for(i = 0; i < possibleContainers.length; i++) {
+		// find the tasks iframe, and get it's main parent with the .AD class
+		var tasksIframe = document.getElementById('tasksiframe');
 
-			possibleHeader = possibleContainers[i].querySelector('table .Hp');
+		if(tasksIframe) {
 
-			if(possibleHeader && possibleHeader.innerHTML.indexOf('Tasks') !== -1) {
-				$tasksContainer = possibleContainers[i];
-				break;
+			$tasksContainer = document.getElementById('tasksiframe');
+			while($tasksContainer.className.indexOf('AD') === -1) {
+				$tasksContainer = $tasksContainer.parentNode;
 			}
 
-		}
-		
-		if($tasksContainer) {
 			$tasksContainer.className += ' gmail-righttasks';
 			position();
 
 			$tasksContainer.parentNode.className += ' gmail-righttasks-container';
 
 			var cssURL = chrome.extension.getURL('gmail-righttasks.css');
-
-			var tasksIframe = document.getElementById('tasksiframe');
 
 			// get the dom of the tasks iframe
 			var getIframeDom = function() {
