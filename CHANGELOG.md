@@ -1,4 +1,8 @@
 
+### 2.2 (August 15, 2013)
+
+* Fix the overlapping tasks widget over the dropdown user menu from the top-right.
+
 ### 2.1 (August 15, 2013)
 
 * Fix the overlapping tasks widget when composing new messages in full-screen mode.

@@ -12,7 +12,7 @@
 
 /* Fix for full-screen message compose */
 div.dw.gmail-righttasks-top-container {
-	z-index: 6;
+	z-index: 1;
 }
 
 .gmail-righttasks-container {
