@@ -1,4 +1,8 @@
 
+### 2.1 (August 15, 2013)
+
+* Fix the overlapping tasks widget when composing new messages in full-screen mode.
+
 ### 2.0 (August 14, 2013)
 
 * Fix the extension not working if Gmail was set in a language other than English.

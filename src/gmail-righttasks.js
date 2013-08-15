@@ -1,9 +1,9 @@
 /*
  * RightTasks Chrome Extension
  * Adds your Tasks to the right side in Gmail
- * 
- * (c) Ionut Colceriu - https://github.com/ghinda
- * 
+ *
+ * (c) Ionut Colceriu - http://ghinda.net/
+ *
  */
 
 var rightTasks = function() {
@@ -41,15 +41,24 @@ var rightTasks = function() {
 	// find the tasks container added dynamically by Gmail
 	var findTasksContainer = function() {
 
-		// find the tasks iframe, and get it's main parent with the .AD class
+		// find the tasks iframe, and get it's main parent with the .dw class
 		var tasksIframe = document.getElementById('tasksiframe');
 
 		if(tasksIframe) {
 
-			$tasksContainer = document.getElementById('tasksiframe');
-			while($tasksContainer.className.indexOf('AD') === -1) {
-				$tasksContainer = $tasksContainer.parentNode;
+			var topParent = document.getElementById('tasksiframe');
+			while(topParent.className.indexOf('dw') === -1) {
+				topParent = topParent.parentNode;
+
+				if(topParent.className.indexOf('AD') !== -1) {
+					$tasksContainer = topParent;
+				}
 			}
+
+			// add a class to the top-most parent of the tasks widget
+			// to be able to give it a lower z-index
+			// and not overlap the full-screen compose message popup
+			topParent.className += ' gmail-righttasks-top-container';
 
 			$tasksContainer.className += ' gmail-righttasks';
 			position();

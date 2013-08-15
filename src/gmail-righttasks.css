@@ -1,13 +1,18 @@
 /*
- * Gmail RightTasks Extension
+ * RightTasks Chrome Extension
  * Adds your Tasks to the right side in Gmail
- * 
- * (c) Ionut Colceriu - https://github.com/ghinda
- * 
+ *
+ * (c) Ionut Colceriu - http://ghinda.net/
+ *
  */
 
 .AO {
 	margin-right: 220px;
+}
+
+/* Fix for full-screen message compose */
+div.dw.gmail-righttasks-top-container {
+	z-index: 6;
 }
 
 .gmail-righttasks-container {
