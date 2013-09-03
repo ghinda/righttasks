@@ -54,6 +54,24 @@ div.dw.gmail-righttasks-top-container {
 	display: none;
 }
 
+.gmail-righttasks table img[data-tooltip]:first-of-type {
+	display: block;
+	float: right;
+	background-image: none;
+}
+
+.gmail-righttasks table img[data-tooltip]:first-of-type:after {
+	content: '';
+	display: block;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-width: 5px 0 5px 10px;
+	border-color: transparent transparent transparent #fff;
+}
+
 #tasksiframe {
 	width: 100%;
 }
@@ -89,6 +107,10 @@ div.dw.gmail-righttasks-top-container {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
+/* Minimize to the right side
+ */
+
 
 /* Fix issue with the settings dropdown being under the tasks sidebar,
  * caused by Boomerang extension.

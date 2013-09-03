@@ -14,8 +14,14 @@ var rightTasks = function() {
 		lastTopPosition;
 	
 	var position = function() {
-		
+
 		currentTopPosition = $mailContainer.offsetTop;
+
+		/* Compatibility with Streak for Gmail, Chrome extension
+		 */
+		if(currentTopPosition === 0) {
+			currentTopPosition = document.getElementsByClassName('pv_main_container').offsetTop;
+		}
 		
 		// set the widget top to match the main container top
 		if($tasksContainer && currentTopPosition!== lastTopPosition) {
