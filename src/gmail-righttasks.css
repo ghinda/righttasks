@@ -96,3 +96,10 @@ div.dw.gmail-righttasks-top-container {
 div.dw {
 	z-index: 2;
 }
+
+/* Fix issue with the right-side-chat labs feature causing the tasks sidebar
+ * to be placed above the chat sidebar.
+ */
+.aCl {
+	margin-left: -220px;
+}
