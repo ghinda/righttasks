@@ -131,11 +131,16 @@ div.dw {
 /* Fix layout issues with the Streak for Gmail, Chrome extension.
  */
 div#workflowArea {
-	overflow: visible;
-	overflow-y: auto !important;
-	margin-right: 220px;
+	overflow: hidden;
 }
 
-#workflowArea .G-atb {
-	width: calc(100% + 220px);
+div#workflowArea .bv_container {
+	overflow: auto;
+	height: 100%;
+	padding-left: 0;
+}
+
+#workflowArea .bv_container,
+#workflowArea .pv_main_container {
+	width: calc(100% - 220px);
 }
