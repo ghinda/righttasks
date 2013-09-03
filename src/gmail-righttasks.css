@@ -54,7 +54,7 @@ div.dw.gmail-righttasks-top-container {
 	display: none;
 }
 
-.gmail-righttasks table img[data-tooltip]:first-of-type {
+/*.gmail-righttasks table img[data-tooltip]:first-of-type {
 	position: relative;
 	display: block;
 	float: right;
@@ -64,15 +64,15 @@ div.dw.gmail-righttasks-top-container {
 .gmail-righttasks table img[data-tooltip]:first-of-type:after {
 	content: '';
 	display: block;
-	width: 10px;
-	height: 10px;
+	width: 0;
+	height: 0;
 	position: absolute;
 	top: 0;
 	left: 0;
-	border-width: 5px 0 5px 10px;
-	border-color: transparent transparent transparent #fff;
-	background: red;
-}
+	border-style: solid;
+	border-width: 50px 0 50px 200px;
+	border-color: transparent transparent transparent #007bff;
+}*/
 
 #tasksiframe {
 	width: 100%;
