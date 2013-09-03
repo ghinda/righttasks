@@ -55,6 +55,7 @@ div.dw.gmail-righttasks-top-container {
 }
 
 .gmail-righttasks table img[data-tooltip]:first-of-type {
+	position: relative;
 	display: block;
 	float: right;
 	background-image: none;
@@ -70,6 +71,7 @@ div.dw.gmail-righttasks-top-container {
 	left: 0;
 	border-width: 5px 0 5px 10px;
 	border-color: transparent transparent transparent #fff;
+	background: red;
 }
 
 #tasksiframe {
@@ -124,4 +126,16 @@ div.dw {
  */
 .aCl {
 	margin-left: -220px;
+}
+
+/* Fix layout issues with the Streak for Gmail, Chrome extension.
+ */
+div#workflowArea {
+	overflow: visible;
+	overflow-y: auto !important;
+	margin-right: 220px;
+}
+
+#workflowArea .G-atb {
+	width: calc(100% + 220px);
 }
