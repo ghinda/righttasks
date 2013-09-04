@@ -140,7 +140,26 @@ var rightTasks = function() {
 							}
 							
 						}, true);
-						
+
+						// add minimize button
+						var $tasksHeader = $tasksContainer.querySelector('td.Hm');
+
+						var $minimizeBtn = document.createElement('a');
+						$minimizeBtn.className = 'righttasks-minimize-btn';
+						$minimizeBtn.setAttribute('title', 'Minimize');
+						$minimizeBtn.setAttribute('aria-label', 'Minimize');
+
+						$minimizeBtn.addEventListener('click', function(e) {
+							if(document.body.className.indexOf('righttasks-minimized') === -1) {
+								// add class
+								document.body.className += ' righttasks-minimized';
+							} else {
+								// remove class
+								document.body.className = document.body.className.replace(/ righttasks-minimized/g, '');
+							}
+						});
+
+						$tasksHeader.appendChild($minimizeBtn);
 						
 					}
 				

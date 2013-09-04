@@ -54,26 +54,6 @@ div.dw.gmail-righttasks-top-container {
 	display: none;
 }
 
-/*.gmail-righttasks table img[data-tooltip]:first-of-type {
-	position: relative;
-	display: block;
-	float: right;
-	background-image: none;
-}
-
-.gmail-righttasks table img[data-tooltip]:first-of-type:after {
-	content: '';
-	display: block;
-	width: 0;
-	height: 0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	border-style: solid;
-	border-width: 50px 0 50px 200px;
-	border-color: transparent transparent transparent #007bff;
-}*/
-
 #tasksiframe {
 	width: 100%;
 }
@@ -110,9 +90,87 @@ div.dw.gmail-righttasks-top-container {
 	box-sizing: border-box;
 }
 
-/* Minimize to the right side
+
+/* Minimize functionality
  */
 
+.righttasks-minimize-btn {
+	float: right;
+	position: relative;
+	display: block;
+	width: 25px;
+	height: 25px;
+	opacity: .7;
+	cursor: pointer;
+}
+
+.righttasks-minimize-btn:after {
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	margin-top: -3px;
+	margin-lefT: -3px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border-style: solid;
+	border-width: 5px 0 5px 5px;
+	border-color: transparent transparent transparent #fff;
+}
+
+.righttasks-minimize-btn:hover {
+	background-color: #737373;
+	opacity: 1;
+}
+
+.righttasks-minimized .AO {
+	margin-right: 30px;
+}
+
+.righttasks-minimized .gmail-righttasks {
+	width: 30px !important;
+	visibility: visible;
+}
+
+.righttasks-minimized .gmail-righttasks * {
+	height: 100%;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.righttasks-minimized .gmail-righttasks .righttasks-minimize-btn {
+	width: 100%;
+	height: 100%;
+	background: #404040;
+}
+
+.righttasks-minimized .gmail-righttasks .righttasks-minimize-btn:hover {
+	background-color: #737373;
+}
+
+.righttasks-minimized .gmail-righttasks .righttasks-minimize-btn:after {
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	margin-top: -3px;
+	margin-lefT: -3px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border-style: solid;
+	border-width: 5px 5px 5px 0;
+	border-color: transparent #fff transparent transparent;
+}
+
+.righttasks-minimized .gmail-righttasks #tasksiframe {
+	display: none;
+}
+
+.righttasks-minimized .gmail-righttasks table td:first-child {
+	display: none;
+}
 
 /* Fix issue with the settings dropdown being under the tasks sidebar,
  * caused by Boomerang extension.
