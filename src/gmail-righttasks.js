@@ -11,7 +11,8 @@ var rightTasks = function() {
 	var $tasksContainer,
 		$mailContainer,
 		currentTopPosition,
-		lastTopPosition;
+		lastTopPosition,
+		minimizedTasks = localStorage.getItem('minimizedTasks') ? JSON.parse(localStorage.getItem('minimizedTasks')) : false;
 	
 	var position = function() {
 
@@ -153,13 +154,24 @@ var rightTasks = function() {
 							if(document.body.className.indexOf('righttasks-minimized') === -1) {
 								// add class
 								document.body.className += ' righttasks-minimized';
+
+								// save in localstorage
+								localStorage.setItem('minimizedTasks', 'true');
 							} else {
 								// remove class
 								document.body.className = document.body.className.replace(/ righttasks-minimized/g, '');
+
+								// save in localstorage
+								localStorage.setItem('minimizedTasks', 'false');
 							}
 						});
 
 						$tasksHeader.appendChild($minimizeBtn);
+
+						// if previously minimized, add minimized class
+						if(minimizedTasks) {
+							document.body.className += ' righttasks-minimized';
+						}
 						
 					}
 				
