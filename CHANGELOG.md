@@ -1,8 +1,9 @@
 
-### 2.3 (September X, 2013)
+### 2.3 (September 5, 2013)
 
 * Fix the overlapping tasks widget over the chat sidebar, when using the right-side-chat Labs feature.
 * Fix layout conflicts with the Streak for Gmail Chrome extension.
+* New functionality to minimize the tasks widget to the right side, saving the current state to Local Storage.
 
 ### 2.2 (August 15, 2013)
 

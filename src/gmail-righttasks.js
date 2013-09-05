@@ -157,12 +157,18 @@ var rightTasks = function() {
 
 								// save in localstorage
 								localStorage.setItem('minimizedTasks', 'true');
+
+								// change title attribute tooltip
+								$minimizeBtn.setAttribute('title', 'Restore');
 							} else {
 								// remove class
 								document.body.className = document.body.className.replace(/ righttasks-minimized/g, '');
 
 								// save in localstorage
 								localStorage.setItem('minimizedTasks', 'false');
+
+								// change title attribute tooltip
+								$minimizeBtn.setAttribute('title', 'Minimize');
 							}
 						});
 
