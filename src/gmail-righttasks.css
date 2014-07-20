@@ -1,61 +1,67 @@
 /*
- * RightTasks Chrome Extension
- * Adds your Tasks to the right side in Gmail
- *
- * (c) Ionut Colceriu - http://ghinda.net/
- *
- */
+* RightTasks Chrome Extension
+* Adds your Tasks to the right side in Gmail
+*
+* (c) Ionut Colceriu - http://ghinda.net/
+*
+*/
 
 .AO {
-	margin-right: 220px;
+  margin-right: 220px;
 }
 
 /* Fix for full-screen message compose */
 div.dw.gmail-righttasks-top-container {
-	z-index: 1;
+  z-index: 1;
 }
 
 .gmail-righttasks-container {
-	position: absolute !important;
-	bottom: 0 !important;
-	right: 0 !important;
-	z-index: -1;
+  position: absolute !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  z-index: -1;
 }
 
 .gmail-righttasks {
-	position: fixed;
-	top: 0;
-	right: 0;
-	z-index: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
 
-	height: 100% !important;
-	width: 220px !important;
-	
-	border: 0;
-	
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+  height: 100% !important;
+  width: 220px !important;
+
+  border: 0;
+
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .gmail-righttasks .Ed {
-	height: 100% !important;
+  height: 100% !important;
 }
 
-.gmail-righttasks .nH[style] {
-	height: 100% !important;
+.gmail-righttasks .nH {
+  height: 100% !important;
+}
+
+/* Task list black header
+ */
+.gmail-righttasks .nH.Hy {
+  height: auto !important;
 }
 
 .gmail-righttasks .nH.Hd {
-	box-shadow: none;
+  box-shadow: none;
 }
 
 .gmail-righttasks table img[data-tooltip] {
-	display: none;
+  display: none;
 }
 
 #tasksiframe {
-	width: 100%;
+  width: 100%;
 }
 
 /* Tasks Iframe */
@@ -63,142 +69,153 @@ div.dw.gmail-righttasks-top-container {
 .tasks-frame body > iframe + div > .VY,
 .tasks-frame body > iframe + div > .VY div:nth-child(3),
 .tasks-frame .Ed {
-	position: relative;
-	height: 100% !important;
+  position: relative;
+  height: 100% !important;
 
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .tasks-frame body > iframe + div {
-	padding-bottom: 35px;
+  padding-bottom: 35px;
 }
 
 .tasks-frame body > iframe + div > .VY .DJ {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
 
-	display: block;
-	height: 35px;
-	width: 100%;
+  display: block;
+  height: 35px;
+  width: 100%;
 
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-
-/* Minimize functionality
+/* Completed Tasks view
  */
 
+.tasks-frame body.Dw > div,
+.tasks-frame body.Dw > div > .VY {
+  height: 100%;
+}
+
+.tasks-frame body.Dw > div > .VY > div:nth-child(3) {
+  height: calc(100% - 70px);
+}
+
+/* Minimize functionality
+*/
+
 .righttasks-minimize-btn {
-	float: right;
-	position: relative;
-	display: block;
-	width: 25px;
-	height: 25px;
-	opacity: .7;
-	cursor: pointer;
+  float: right;
+  position: relative;
+  display: block;
+  width: 25px;
+  height: 25px;
+  opacity: .7;
+  cursor: pointer;
 }
 
 .righttasks-minimize-btn:after {
-	content: '';
-	display: block;
-	width: 0;
-	height: 0;
-	margin-top: -3px;
-	margin-lefT: -3px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	border-style: solid;
-	border-width: 5px 0 5px 5px;
-	border-color: transparent transparent transparent #fff;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  margin-top: -3px;
+  margin-lefT: -3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-color: transparent transparent transparent #fff;
 }
 
 .righttasks-minimize-btn:hover {
-	background-color: #737373;
-	opacity: 1;
+  background-color: #737373;
+  opacity: 1;
 }
 
 .righttasks-minimized .AO {
-	margin-right: 30px;
+  margin-right: 30px;
 }
 
 .righttasks-minimized .gmail-righttasks {
-	width: 30px !important;
-	visibility: visible;
+  width: 30px !important;
+  visibility: visible;
 }
 
 .righttasks-minimized .gmail-righttasks * {
-	height: 100%;
-	padding: 0 !important;
-	margin: 0 !important;
+  height: 100%;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .righttasks-minimized .gmail-righttasks .righttasks-minimize-btn {
-	width: 100%;
-	height: 100%;
-	background: #404040;
+  width: 100%;
+  height: 100%;
+  background: #404040;
 }
 
 .righttasks-minimized .gmail-righttasks .righttasks-minimize-btn:hover {
-	background-color: #737373;
+  background-color: #737373;
 }
 
 .righttasks-minimized .gmail-righttasks .righttasks-minimize-btn:after {
-	content: '';
-	display: block;
-	width: 0;
-	height: 0;
-	margin-top: -3px;
-	margin-lefT: -3px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	border-style: solid;
-	border-width: 5px 5px 5px 0;
-	border-color: transparent #fff transparent transparent;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  margin-top: -3px;
+  margin-lefT: -3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-style: solid;
+  border-width: 5px 5px 5px 0;
+  border-color: transparent #fff transparent transparent;
 }
 
 .righttasks-minimized .gmail-righttasks #tasksiframe {
-	display: none;
+  display: none;
 }
 
 .righttasks-minimized .gmail-righttasks table td:first-child {
-	display: none;
+  display: none;
 }
 
 /* Fix issue with the settings dropdown being under the tasks sidebar,
- * caused by Boomerang extension.
- */
+* caused by Boomerang extension.
+*/
 div.dw {
-	z-index: 2;
+  z-index: 2;
 }
 
 /* Fix issue with the right-side-chat labs feature causing the tasks sidebar
- * to be placed above the chat sidebar.
- */
+* to be placed above the chat sidebar.
+*/
 .aCl {
-	margin-left: -220px;
+  margin-left: -220px;
 }
 
 /* Fix layout issues with the Streak for Gmail, Chrome extension.
- */
+*/
 div#workflowArea {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 div#workflowArea .bv_container {
-	overflow: auto;
-	height: 100%;
-	padding-left: 0;
+  overflow: auto;
+  height: 100%;
+  padding-left: 0;
 }
 
 #workflowArea .bv_container,
 #workflowArea .pv_main_container {
-	width: calc(100% - 220px);
+  width: calc(100% - 220px);
 }

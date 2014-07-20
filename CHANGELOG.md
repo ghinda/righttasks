@@ -1,4 +1,9 @@
 
+### 2.4 (July 20, 2013)
+
+* Fix issue with the tasks list not taking up the full height.
+* Fix scroll and height issues in the "Completed Tasks" view.
+
 ### 2.3 (September 5, 2013)
 
 * Fix the overlapping tasks widget over the chat sidebar, when using the right-side-chat Labs feature.
