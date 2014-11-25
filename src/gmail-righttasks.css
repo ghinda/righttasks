@@ -6,11 +6,15 @@
 *
 */
 
-.AO-main {
+/* Don't add the margin in gmail popups
+ */
+body:not(.xE) .AO {
   margin-right: 220px;
 }
 
-/* Fix for full-screen message compose */
+/* Fix for full-screen message compose
+ */
+
 div.dw.gmail-righttasks-top-container {
   z-index: 1;
 }
@@ -64,7 +68,8 @@ div.dw.gmail-righttasks-top-container {
   width: 100%;
 }
 
-/* Tasks Iframe */
+/* Tasks Iframe
+ */
 .tasks-frame body > iframe + div,
 .tasks-frame body > iframe + div > .VY,
 .tasks-frame body > iframe + div > .VY div:nth-child(3),
@@ -141,13 +146,21 @@ div.dw.gmail-righttasks-top-container {
   opacity: 1;
 }
 
-.righttasks-minimized .AO {
+body.righttasks-minimized .AO {
   margin-right: 30px;
 }
 
 .righttasks-minimized .gmail-righttasks {
   width: 30px !important;
   visibility: visible;
+}
+
+.righttasks-minimized .gmail-righttasks .pi {
+  display: none;
+}
+
+.righttasks-minimized .gmail-righttasks .nH.Hy {
+  height: 100% !important;
 }
 
 .righttasks-minimized .gmail-righttasks * {
@@ -190,17 +203,22 @@ div.dw.gmail-righttasks-top-container {
 }
 
 /* Fix issue with the settings dropdown being under the tasks sidebar,
-* caused by Boomerang extension.
-*/
+ * caused by Boomerang extension.
+ */
 div.dw {
   z-index: 2;
 }
 
-/* Fix issue with the right-side-chat labs feature causing the tasks sidebar
-* to be placed above the chat sidebar.
-*/
+/* Fix issue with the right-side-chat labs feature
+ * causing the tasks sidebar
+ * to be placed above the chat sidebar.
+ */
 .aCl {
   margin-left: -220px;
+}
+
+.righttasks-minimized .aCl {
+  margin-left: -20px;
 }
 
 /* Fix layout issues with the Streak for Gmail, Chrome extension.

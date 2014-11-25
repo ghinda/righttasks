@@ -12,6 +12,12 @@ You can use all the features available in the official tasks widget, such as:
 [RightTasks on the Chrome Web Store](https://chrome.google.com/webstore/detail/right-tasks-for-gmail/hgniockidojcaaolfcbbkaaakbjdebpe)
 
 
+Contributors
+------------
+
+* [kenny3794](https://github.com/kenny3794)
+
+
 License
 -------
 

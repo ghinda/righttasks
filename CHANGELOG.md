@@ -1,5 +1,11 @@
 
-### 2.4 (July 20, 2013)
+### 2.5 (November 25, 2014)
+
+* Don't trigger the extension in Gmail pop-ups.
+* Fix maximize button not taking up the whole height, when the task list is minimized.
+* Fix issues with the layout when using the right-side-chat Labs feature, and minimizing the task list.
+
+### 2.4 (July 20, 2014)
 
 * Fix issue with the tasks list not taking up the full height.
 * Fix scroll and height issues in the "Completed Tasks" view.
