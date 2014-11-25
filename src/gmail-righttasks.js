@@ -208,46 +208,54 @@ var rightTasks = function() {
     currentTopPosition = 0;
     lastTopPosition = 1;
 
-    var $mailButton = document.querySelector('.aki.pp > div');
-
-    // open mail menu
-    triggerClick($mailButton);
-
-    // close mail menu
-    triggerClick($mailButton);
-
-    // give it some time to render the markup
-    setTimeout(function() {
-
-      // get the tasks button from the mail dropdown
-      var $tasksButton = document.querySelector('.aki.pp .jQjAxd [role=menuitem]:nth-child(3)');
-
-      // click the tasks button
-      triggerClick($tasksButton);
-
-      // get the
-      findTasksContainer();
-
-    }, 10);
-
-    // disable the ESC shortcut key, to prevent the tasks widget from being closed
-    document.addEventListener('keydown', function (e) {
-      if(e.which === 27){
-        return false;
-      }
-    }, false);
+    //var inithtml = tasksIframe.contentDocument.getElementsByTagName('html')[0],
+     var initbody = document.getElementsByTagName("BODY")[0];
 
 
-    // get the main gmail container
-    $mailContainer = document.querySelector('.AO');
+    if (initbody.className.indexOf('xE') == -1) {
+       var aoObj = document.getElementsByClassName("AO")[0];
+       aoObj.className += " AO-main";
 
-    // reposition the widget when the page resizes
-    window.addEventListener('resize', position);
+        var $mailButton = document.querySelector('.aki.pp > div');
 
-    // check top position every 5 seconds
-    // set position when the view type (compact, cozy, etc.) changes
-    setInterval(position, 5000);
+        // open mail menu
+        triggerClick($mailButton);
 
+        // close mail menu
+        triggerClick($mailButton);
+
+        // give it some time to render the markup
+        setTimeout(function() {
+
+          // get the tasks button from the mail dropdown
+          var $tasksButton = document.querySelector('.aki.pp .jQjAxd [role=menuitem]:nth-child(3)');
+
+          // click the tasks button
+          triggerClick($tasksButton);
+
+          // get the
+          findTasksContainer();
+
+        }, 10);
+
+        // disable the ESC shortcut key, to prevent the tasks widget from being closed
+        document.addEventListener('keydown', function (e) {
+          if(e.which === 27){
+            return false;
+          }
+        }, false);
+
+
+        // get the main gmail container
+        $mailContainer = document.querySelector('.AO');
+
+        // reposition the widget when the page resizes
+        window.addEventListener('resize', position);
+
+        // check top position every 5 seconds
+        // set position when the view type (compact, cozy, etc.) changes
+        setInterval(position, 5000);
+    }
   };
 
   // reveal methods
