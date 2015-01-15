@@ -1,4 +1,4 @@
-[RightTasks for Gmail™](https://chrome.google.com/webstore/detail/right-tasks-for-gmail/hgniockidojcaaolfcbbkaaakbjdebpe)
+[RightTasks for Gmail™](https://chrome.google.com/webstore/detail/right-tasks-for-gmail/hgniockidojcaaolfcbbkaaakbjdebpe) [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=ghinda&url=https://github.com/ghinda/gmail-righttasks&title=gmail-righttasks&language=javascript&tags=github&category=software)
 =======================================
 
 RightTasks places your Google Tasks in a right sidebar in Gmail, like in Google Calendar.
