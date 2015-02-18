@@ -1,0 +1,8 @@
+# editor
+.kateproject
+.kateproject.d
+*.kate-swp
+
+# extension
+*.xpi
+*.zip
