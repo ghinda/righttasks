@@ -1,0 +1,12 @@
+{
+  "name": "righttasks",
+  "title": "RightTasks for Gmail",
+  "id": "jid1-mxLXoM0pmaQU1Q",
+  "description": "Adds your Google Tasks to a right sidebar in Gmail, like in Google Calendar.",
+  "author": "Ionut Colceriu <contact@ghinda.net>",
+  "license": "GPL 3.0",
+  "version": "2.6.0",
+  "main": "righttasks-firefox",
+  "icon": "data/righttasks-icon-48.png",
+  "icon64": "data/righttasks-icon-64.png"
+}

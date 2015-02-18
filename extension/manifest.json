@@ -3,12 +3,12 @@
 
   "name": "RightTasks for Gmail™",
   "description": "Adds your Google Tasks to a right sidebar in Gmail, like in Google Calendar.",
-  "version": "2.5",
+  "version": "2.6.0",
 
   "icons": {
-    "16": "gmail-righttasks-icon-16.png",
-    "48": "gmail-righttasks-icon-48.png",
-    "128": "gmail-righttasks-icon-128.png"
+    "16": "data/righttasks-icon-16.png",
+    "48": "data/righttasks-icon-48.png",
+    "128": "data/righttasks-icon-128.png"
   },
 
   "permissions": [
@@ -18,11 +18,11 @@
   "content_scripts": [
     {
       "matches": [ "https://mail.google.com/*" ],
-      "css": [ "gmail-righttasks.css" ],
-      "js": [ "gmail-righttasks.js" ]
+      "css": [ "data/righttasks.css" ],
+      "js": [ "data/righttasks.js" ]
     }
   ],
 
-  "web_accessible_resources": [ "gmail-righttasks.css" ]
+  "web_accessible_resources": [ "data/righttasks.css" ]
 
 }

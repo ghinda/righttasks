@@ -1,3 +1,7 @@
+### 2.6.0 (, 2015)
+
+* Switch the license to GPLv3.
+* Support for Firefox. 
 
 ### 2.5 (November 25, 2014)
 

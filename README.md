@@ -14,6 +14,14 @@ You can use all the features available in the official tasks widget, such as:
 * The "G then K" keyboard shortcut, which shifts the cursor from Gmail to Tasks.
 
 
+Development
+-----------
+
+* To run the extension in Chrome, load the `/extension` folder as an unpacked extension.
+
+* To run the extension in Firefox, install the [Add-on SDK](https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials/Installation), then run `cfx run` in the `/extension` folder.
+
+
 Contributors
 ------------
 
@@ -23,6 +31,6 @@ Contributors
 License
 -------
 
-RightTasks is free and unencumbered public domain software. For more
-information, see <http://unlicense.org/> or the accompanying UNLICENSE file.
+RightTasks is free software under the GPLv3. For more
+information, see <https://www.gnu.org/copyleft/gpl.html> or the accompanying LICENSE file.
 

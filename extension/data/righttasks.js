@@ -1,5 +1,5 @@
 /*
-* RightTasks Chrome Extension
+* RightTasks Extension
 * Adds your Tasks to the right side in Gmail
 *
 * (c) Ionut Colceriu - http://ghinda.net/
@@ -47,8 +47,16 @@ var rightTasks = (function() {
 
     var evt1 = document.createEvent('MouseEvents');
     var evt2 = document.createEvent('MouseEvents');
-    evt1.initMouseEvent('mousedown', true, true, window, 1, 1, 1, 1, 1, false, false, false, false, 0, null);
-    evt2.initMouseEvent('mouseup', true, true, window, 1, 1, 1, 1, 1, false, false, false, false, 0, null);
+    
+    var theWindow = window;
+    
+    // for firefox
+    if(typeof unsafeWindow !== 'undefined') {
+      theWindow = unsafeWindow;
+    }
+    
+    evt1.initMouseEvent('mousedown', true, true, theWindow, 1, 1, 1, 1, 1, false, false, false, false, 0, null);
+    evt2.initMouseEvent('mouseup', true, true, theWindow, 1, 1, 1, 1, 1, false, false, false, false, 0, null);
 
     $element.dispatchEvent(evt1);
     $element.dispatchEvent(evt2);
@@ -60,7 +68,7 @@ var rightTasks = (function() {
 
     // find the tasks iframe, and get it's main parent with the .dw class
     var tasksIframe = document.getElementById('tasksiframe');
-
+    
     if(tasksIframe) {
 
       var topParent = document.getElementById('tasksiframe');
@@ -82,8 +90,14 @@ var rightTasks = (function() {
 
       $tasksContainer.parentNode.className += ' gmail-righttasks-container';
 
-      var cssURL = chrome.extension.getURL('gmail-righttasks.css');
-
+      // for firefox
+      var cssURL = './righttasks.css';
+      
+      // for chrome
+      if(window.chrome && window.chrome.extension) {
+        cssURL = chrome.extension.getURL('data/righttasks.css');
+      }
+      
       // get the dom of the tasks iframe
       var getIframeDom = function() {
 
@@ -204,7 +218,7 @@ var rightTasks = (function() {
   };
 
   var init = function() {
-
+    
     // if we're in a gmail pop-up
     // don't trigger the extension
     if(document.body.className.indexOf('xE') !== -1) {
