@@ -3,6 +3,8 @@ RightTasks for Gmail™ [![Flattr this git repo](http://api.flattr.com/button/fl
 
 [RightTasks for Chrome](https://chrome.google.com/webstore/detail/right-tasks-for-gmail/hgniockidojcaaolfcbbkaaakbjdebpe)
 
+[RightTasks for Firefox](https://addons.mozilla.org/en-US/firefox/addon/righttasks-for-gmail/)
+
 [RightTasks for Opera](https://addons.opera.com/en/extensions/details/righttasks-for-gmailtm/)
 
 RightTasks is a browser extension that puts your Google Tasks in a sidebar in Gmail, like in Google Calendar.

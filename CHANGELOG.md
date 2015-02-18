@@ -1,7 +1,9 @@
-### 2.6.0 (, 2015)
+
+### 2.6.0 (February 19, 2015)
 
 * Switch the license to GPLv3.
 * Support for Firefox. 
+* Folder structure changes to be able to build all the extensions from the same codebase.
 
 ### 2.5 (November 25, 2014)
 
