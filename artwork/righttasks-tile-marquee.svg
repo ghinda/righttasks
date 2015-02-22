@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1400"
+   height="560"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="gmail-righttasks-tile-marquee.svg"
+   inkscape:export-filename="/home/mokush/dev/righttasks/artwork/gmail-righttasks-tile-marquee.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4148"
+       id="linearGradient4154"
+       x1="228.58035"
+       y1="560.77112"
+       x2="228.58035"
+       y2="788.62823"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(3.181818,0,0,2,-138.72071,-799.34256)" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4148">
+      <stop
+         style="stop-color:#3b526a;stop-opacity:1"
+         offset="0"
+         id="stop4150" />
+      <stop
+         style="stop-color:#2d3e50;stop-opacity:1"
+         offset="1"
+         id="stop4152" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="980.6948"
+     inkscape:cy="213.53543"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1238"
+     inkscape:window-height="800"
+     inkscape:window-x="42"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3012"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-63.580357,-237.91394)">
+    <rect
+       y="237.91394"
+       x="63.580357"
+       height="560"
+       width="1400"
+       id="rect3784-6"
+       style="fill:url(#linearGradient4154);fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    <g
+       id="g4156"
+       transform="matrix(1.603022,0,0,1.6005329,-60.84379,-537.13513)">
+      <path
+         inkscape:connector-curvature="0"
+         id="rect3822-4"
+         d="m 184.76786,580.44519 0,0.21433 -0.96875,0 c -7.51121,0 -13.5625,5.96616 -13.5625,13.3494 l 0,136.43332 c 0,7.38324 6.05129,13.3494 13.5625,13.3494 l 0.96875,0 0,0.21432 96.3125,0 2.71875,0 97.40625,0 c 8.69956,0 15.71875,-6.06442 15.71875,-13.59434 l 0,-136.37209 c 0,-7.52992 -7.01919,-13.59434 -15.71875,-13.59434 l -97.40625,0 -2.71875,0 -96.3125,0 z"
+         style="fill:#1a1a1a;fill-opacity:0.5;fill-rule:nonzero;stroke:none" />
+      <g
+         transform="translate(1.2675781e-6,0.044635)"
+         id="g3865-9">
+        <rect
+           y="574.43268"
+           x="265.37585"
+           height="166.96249"
+           width="131.53815"
+           id="rect3804-7"
+           style="fill:#c8c8be;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           rx="15.703179"
+           ry="13.872522" />
+        <rect
+           style="fill:#edebdf;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="rect3800-8"
+           width="99.028053"
+           height="166.96249"
+           x="184.7831"
+           y="574.43268" />
+        <path
+           style="fill:#28abb4;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           d="m 183.80132,574.32167 c -7.51121,0 -13.55461,6.103 -13.55461,13.66697 l 0,139.76134 c 0,7.56395 6.0434,13.66696 13.55461,13.66696 l 11.24252,0 0,-61.40021 0,-64.9542 44.79668,32.47709 44.01636,31.89922 0,-33.43061 -53.46701,-38.83383 -45.2302,-32.85273 z"
+           id="rect3015-8"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ssssccccccccs" />
+        <g
+           id="g3833-4"
+           style="fill:#147077;fill-opacity:1"
+           transform="matrix(0.92483482,0,0,0.92483482,111.44538,3.4565923)">
+          <rect
+             style="fill:#147077;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="rect3812-7"
+             width="78.074532"
+             height="18.503994"
+             x="209.2421"
+             y="677.47449" />
+          <g
+             style="fill:#147077;fill-opacity:1"
+             id="g3828-4">
+            <rect
+               style="fill:#147077;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="rect3808-9"
+               width="78.074532"
+               height="18.503994"
+               x="209.2421"
+               y="638.45221" />
+            <rect
+               style="fill:#147077;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="rect3814-7"
+               width="78.074532"
+               height="18.503994"
+               x="209.2421"
+               y="716.4967" />
+            <rect
+               y="755.51898"
+               x="209.2421"
+               height="18.503994"
+               width="78.074532"
+               id="rect3816-2"
+               style="fill:#147077;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+          </g>
+        </g>
+        <path
+           style="fill:#b2b2a9;fill-opacity:1;stroke:#aaaaa2;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="M 281.34112,685.16225 198.4613,737.63394"
+           id="path3818-8"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <g
+       id="g3435"
+       transform="matrix(1.2304101,0,0,1.2304101,-204.47593,-242.45904)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:108.99389648px;line-height:125%;font-family:Sans;letter-spacing:-3.11497283px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+         x="721.60956"
+         y="603.59741"
+         id="text3922-0"
+         sodipodi:linespacing="125%"
+         transform="scale(1.0007773,0.99922331)"><tspan
+           sodipodi:role="line"
+           id="tspan3924-3"
+           x="721.60956"
+           y="603.59741"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Oxygen-Sans;-inkscape-font-specification:Oxygen-Sans;letter-spacing:-3.11497283px;fill:#ffffff;fill-opacity:1"
+           dx="0 0 0 0 0 0 -10.012413">RightTasks</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:37.25372696px;line-height:125%;font-family:Sans;letter-spacing:-1.06468654px;word-spacing:0px;fill:#ffffff;fill-opacity:0.5;stroke:none"
+         x="1068.3163"
+         y="642.76343"
+         id="text3996-6"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3998-1"
+           x="1068.3163"
+           y="642.76343"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;font-family:Oxygen-Sans;-inkscape-font-specification:Oxygen-Sans;letter-spacing:-1.06468654px;fill:#ffffff;fill-opacity:0.5">for Gmail™</tspan></text>
+    </g>
+  </g>
+</svg>
