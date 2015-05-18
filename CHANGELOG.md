@@ -1,4 +1,9 @@
 
+### 2.6.1 (X, 2015)
+
+* Removed the 5s interval that set the sidebar position. It's no longer needed because the top-bar, containing the Settings buttons, does not change height anymore when changing the `Display density` (comfortable, cozy, compact).
+
+
 ### 2.6.0 (February 19, 2015)
 
 * Switch the license to GPLv3.

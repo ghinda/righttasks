@@ -265,10 +265,6 @@ var rightTasks = (function() {
     // reposition the widget when the page resizes
     window.addEventListener('resize', position);
 
-    // check top position every 5 seconds
-    // set position when the view type (compact, cozy, etc.) changes
-    setInterval(position, 5000);
-
   };
 
   // reveal methods
