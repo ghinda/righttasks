@@ -21,7 +21,15 @@ Development
 
 * To run the extension in Chrome, load the `/extension` folder as an unpacked extension.
 
-* To run the extension in Firefox, install the [Add-on SDK](https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials/Installation), then run `cfx run` in the `/extension` folder.
+* To run the extension in Firefox install `jpm` with `npm install jpm -g`, then run `jpm run` in the `/extension` folder.
+
+
+Build
+-----
+
+* To build the extension for Chrome just pack the contents of the `/extension` folder as a zip file. Exclude the `package.json` file, because it's Firefox specific.
+
+* To build the extension for Firefox, run `jpm xpi` in the `/extension` folder.
 
 
 Contributors
