@@ -86,6 +86,8 @@ div.dw.gmail-righttasks-top-container {
   padding-bottom: 35px;
 }
 
+/* Action footer
+ */
 .tasks-frame body > iframe + div > .VY .DJ {
   position: absolute;
   bottom: 0;
@@ -99,6 +101,14 @@ div.dw.gmail-righttasks-top-container {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+/* Fix bottom notification position in the Action footer.
+ * Without the fix, the notification overlaps the actions.
+ */
+.tasks-frame body > iframe + div > .VY .DJ .Ec {
+  top: auto !important;
+  bottom: 35px;
 }
 
 /* Completed Tasks view

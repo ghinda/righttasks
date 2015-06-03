@@ -3,6 +3,11 @@
 
 * 
 
+## [2.6.2] - 2015-06-03
+
+* Fix positioning issues with the notifications shown at the bottom of the tasks sidebar (eg. when deleting tasks).
+
+
 ## [2.6.1] - 2015-05-26
 
 * Removed the 5s interval that set the sidebar position. It's no longer needed because the top-bar, containing the Settings buttons, does not change height anymore when changing the `Display density` (comfortable, cozy, compact).
