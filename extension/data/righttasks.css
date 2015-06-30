@@ -1,10 +1,10 @@
 /*
-* RightTasks Chrome Extension
-* Adds your Tasks to the right side in Gmail
-*
-* (c) Ionut Colceriu - http://ghinda.net/
-*
-*/
+ * RightTasks Chrome Extension
+ * Adds your Tasks to the right side in Gmail
+ *
+ * (c) Ionut Colceriu - http://ghinda.net/
+ *
+ */
 
 /* Don't add the margin in gmail popups
  */
@@ -12,25 +12,22 @@ body:not(.xE) .AO {
   margin-right: 220px;
 }
 
-/* Fix for full-screen message compose
+/* Move the task list behind the full-screen message compose dialog
  */
-
 div.dw.gmail-righttasks-top-container {
-  z-index: 1;
+  z-index: 2;
 }
 
 .gmail-righttasks-container {
   position: absolute !important;
   bottom: 0 !important;
   right: 0 !important;
-  z-index: -1;
 }
 
 .gmail-righttasks {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
-  z-index: 1;
 
   height: 100% !important;
   width: 220px !important;
@@ -227,8 +224,14 @@ div.dw {
   margin-left: -220px;
 }
 
+/* Reduce right-side padding in the chat sidebar
+ */
+.aCl .akj {
+  padding-right: 1px !important;
+}
+
 .righttasks-minimized .aCl {
-  margin-left: -20px;
+  margin-left: -30px;
 }
 
 /* Fix layout issues with the Streak for Gmail, Chrome extension.
