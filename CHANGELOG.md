@@ -1,8 +1,8 @@
 
-## [2.6.3][Unreleased]
+## [2.6.3] - 2015-06-30
 
 * Fix layout issues when using the Multiple Inboxes labs feature.
-* 
+* Reduce padding in the chat widget when using the Right-Side Chat labs feature.
 
 ## [2.6.2] - 2015-06-03
 
