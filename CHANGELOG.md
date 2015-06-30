@@ -1,7 +1,8 @@
 
-## [2.6.3][unreleased]
+## [2.6.3][Unreleased]
 
 * Fix layout issues when using the Multiple Inboxes labs feature.
+* 
 
 ## [2.6.2] - 2015-06-03
 

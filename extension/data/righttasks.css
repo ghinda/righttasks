@@ -1,10 +1,10 @@
 /*
-* RightTasks Chrome Extension
-* Adds your Tasks to the right side in Gmail
-*
-* (c) Ionut Colceriu - http://ghinda.net/
-*
-*/
+ * RightTasks Chrome Extension
+ * Adds your Tasks to the right side in Gmail
+ *
+ * (c) Ionut Colceriu - http://ghinda.net/
+ *
+ */
 
 /* Don't add the margin in gmail popups
  */
@@ -12,9 +12,8 @@ body:not(.xE) .AO {
   margin-right: 220px;
 }
 
-/* Fix for full-screen message compose
+/* Move the task list behind the full-screen message compose dialog
  */
-
 div.dw.gmail-righttasks-top-container {
   z-index: 6;
 }
@@ -23,6 +22,10 @@ div.dw.gmail-righttasks-top-container {
   position: absolute !important;
   bottom: 0 !important;
   right: 0 !important;
+
+  /* Move the task list under the small compose dialog
+   */
+  z-index: -1 !important;
 }
 
 .gmail-righttasks {
