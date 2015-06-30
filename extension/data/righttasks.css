@@ -16,14 +16,13 @@ body:not(.xE) .AO {
  */
 
 div.dw.gmail-righttasks-top-container {
-  z-index: 1;
+  z-index: 6;
 }
 
 .gmail-righttasks-container {
   position: absolute !important;
   bottom: 0 !important;
   right: 0 !important;
-  z-index: -1;
 }
 
 .gmail-righttasks {
