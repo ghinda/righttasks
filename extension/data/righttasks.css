@@ -15,7 +15,7 @@ body:not(.xE) .AO {
 /* Move the task list behind the full-screen message compose dialog
  */
 div.dw.gmail-righttasks-top-container {
-  z-index: 6;
+  z-index: 2;
 }
 
 .gmail-righttasks-container {
@@ -25,14 +25,14 @@ div.dw.gmail-righttasks-top-container {
 
   /* Move the task list under the small compose dialog
    */
-  z-index: -1 !important;
+  /*z-index: -1 !important;*/
 }
 
 .gmail-righttasks {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
-  z-index: 1;
+  /*z-index: 1;*/
 
   height: 100% !important;
   width: 220px !important;
