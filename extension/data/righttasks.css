@@ -22,17 +22,12 @@ div.dw.gmail-righttasks-top-container {
   position: absolute !important;
   bottom: 0 !important;
   right: 0 !important;
-
-  /* Move the task list under the small compose dialog
-   */
-  /*z-index: -1 !important;*/
 }
 
 .gmail-righttasks {
   position: absolute;
   top: 0;
   right: 0;
-  /*z-index: 1;*/
 
   height: 100% !important;
   width: 220px !important;
@@ -229,8 +224,14 @@ div.dw {
   margin-left: -220px;
 }
 
+/* Reduce right-side padding in the chat sidebar
+ */
+.aCl .akj {
+  padding-right: 1px !important;
+}
+
 .righttasks-minimized .aCl {
-  margin-left: -20px;
+  margin-left: -30px;
 }
 
 /* Fix layout issues with the Streak for Gmail, Chrome extension.
