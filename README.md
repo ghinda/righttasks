@@ -19,17 +19,13 @@ You can use all the features available in the official tasks widget, such as:
 Development
 -----------
 
-* To run the extension in Chrome, load the `/extension` folder as an unpacked extension.
-
-* To run the extension in Firefox install `jpm` with `npm install jpm -g`, then run `jpm run` in the `/extension` folder.
+* Run the extension in Chrome by loading the `/extension` folder as an unpacked extension.
 
 
 Build
 -----
 
-* To build the extension for Chrome just pack the contents of the `/extension` folder as a zip file. Exclude the `package.json` file, because it's Firefox specific.
-
-* To build the extension for Firefox, run `jpm xpi` in the `/extension` folder.
+* Build the extension by packing the contents of the `/extension` folder as a zip file.
 
 
 Contributors

@@ -50,11 +50,6 @@ var rightTasks = (function() {
 
     var theWindow = window;
 
-    // for firefox
-    if(typeof unsafeWindow !== 'undefined') {
-      theWindow = unsafeWindow;
-    }
-
     evt1.initMouseEvent('mousedown', true, true, theWindow, 1, 1, 1, 1, 1, false, false, false, false, 0, null);
     evt2.initMouseEvent('mouseup', true, true, theWindow, 1, 1, 1, 1, 1, false, false, false, false, 0, null);
 
@@ -90,13 +85,7 @@ var rightTasks = (function() {
 
       $tasksContainer.parentNode.className += ' gmail-righttasks-container';
 
-      // for firefox
-      var cssURL = './righttasks.css';
-
-      // for chrome
-      if(window.chrome && window.chrome.extension) {
-        cssURL = chrome.extension.getURL('data/righttasks.css');
-      }
+      var cssURL = chrome.extension.getURL('data/righttasks.css');
 
       // get the dom of the tasks iframe
       var getIframeDom = function() {

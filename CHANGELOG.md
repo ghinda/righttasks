@@ -1,4 +1,8 @@
 
+## [2.6.4] - 2017-06-14
+
+* WebExtensionify the Firefox add-on to be compatible with multiprocess.
+
 ## [2.6.3] - 2015-06-30
 
 * Fix layout issues when using the Multiple Inboxes labs feature.
