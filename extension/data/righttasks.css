@@ -69,7 +69,8 @@ div.dw.gmail-righttasks-top-container {
  */
 .tasks-frame body > iframe + div,
 .tasks-frame body > iframe + div > .VY,
-.tasks-frame body > iframe + div > .VY div:nth-child(3),
+.tasks-frame body > iframe + div > .VY > div,
+.tasks-frame body > iframe + div > .VY > div > div:nth-child(4),
 .tasks-frame .Ed {
   position: relative;
   height: 100% !important;
