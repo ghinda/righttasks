@@ -34,8 +34,6 @@ div.dw.gmail-righttasks-top-container {
 
   border: 0;
 
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -53,6 +51,10 @@ div.dw.gmail-righttasks-top-container {
   height: auto !important;
 }
 
+.gmail-righttasks .nH.Hy + .nH {
+  height: calc(100% - 34px) !important;
+}
+
 .gmail-righttasks .nH.Hd {
   box-shadow: none;
 }
@@ -67,26 +69,24 @@ div.dw.gmail-righttasks-top-container {
 
 /* Tasks Iframe
  */
-.tasks-frame body > iframe + div,
-.tasks-frame body > iframe + div > .VY,
-.tasks-frame body > iframe + div > .VY > div,
-.tasks-frame body > iframe + div > .VY > div > div:nth-child(4),
+.tasks-frame body > div:first-of-type,
+.tasks-frame .VY,
+.tasks-frame .VY > div,
+.tasks-frame .VY > div > div:nth-child(4),
 .tasks-frame .Ed {
-  position: relative;
   height: 100% !important;
 
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.tasks-frame body > iframe + div {
+.tasks-frame body > div:first-of-type {
+  position: relative;
   padding-bottom: 35px;
 }
 
 /* Action footer
  */
-.tasks-frame body > iframe + div > .VY .DJ {
+.tasks-frame .VY .DJ {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -96,8 +96,6 @@ div.dw.gmail-righttasks-top-container {
   height: 35px;
   width: 100%;
 
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -107,18 +105,6 @@ div.dw.gmail-righttasks-top-container {
 .tasks-frame body > iframe + div > .VY .DJ .Ec {
   top: auto !important;
   bottom: 35px;
-}
-
-/* Completed Tasks view
- */
-
-.tasks-frame body.Dw > div,
-.tasks-frame body.Dw > div > .VY {
-  height: 100%;
-}
-
-.tasks-frame body.Dw > div > .VY > div:nth-child(3) {
-  height: calc(100% - 70px);
 }
 
 /* Minimize functionality
