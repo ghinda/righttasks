@@ -1,3 +1,7 @@
+## [2.6.6] - 2017-06-19
+
+* Fix missing scrollbars in the Completed Tasks view.
+
 ## [2.6.5] - 2017-06-19
 
 * Fix missing scrollbars on the tasks list.
