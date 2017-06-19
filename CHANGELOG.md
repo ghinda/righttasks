@@ -1,3 +1,6 @@
+## [2.6.5] - 2017-06-19
+
+* Fix missing scrollbars on the tasks list.
 
 ## [2.6.4] - 2017-06-14
 
