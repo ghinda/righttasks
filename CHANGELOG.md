@@ -1,3 +1,7 @@
+## [2.6.7] - 2017-07-29
+
+* Fix broken task list because of changed markup in Google Tasks.
+
 ## [2.6.6] - 2017-06-19
 
 * Fix missing scrollbars in the Completed Tasks view.
