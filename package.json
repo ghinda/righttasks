@@ -1,0 +1,23 @@
+{
+  "name": "righttasks",
+  "version": "1.0.0",
+  "private": true,
+  "description": "RightTasks is a browser extension that puts your Google Tasks in a sidebar in Gmail, like in Google Calendar.",
+  "scripts": {
+    "dev": "watchify src/righttasks.js -o extension/righttasks.js -v",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghinda/righttasks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ghinda/righttasks/issues"
+  },
+  "homepage": "https://github.com/ghinda/righttasks#readme",
+  "devDependencies": {
+    "watchify": "^3.11.0"
+  }
+}

@@ -6,3 +6,6 @@
 # extension
 *.xpi
 *.zip
+
+# node
+node_modules/
