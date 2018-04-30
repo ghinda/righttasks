@@ -1,10 +1,15 @@
 /* RightTasks Extension
  */
 
-var legacy = require('./legacy')
+var legacy = require('./plugins/gmail-legacy/gmail-legacy')
 
 if (legacy.active()) {
-  legacy.init()
+  console.log('is legacy')
+
+  return legacy.init()
 }
+
+
+console.log('not legacy')
 
 

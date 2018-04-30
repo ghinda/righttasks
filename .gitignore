@@ -9,3 +9,8 @@
 
 # node
 node_modules/
+
+# build
+extension/righttasks.js
+extension/righttasks.css
+
