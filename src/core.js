@@ -16,7 +16,12 @@ Promise
   .then((res) => {
     res.some((r, index) => {
       if (r === true) {
-        plugins[index].init()
+        var plugin = plugins[index]
+        document.documentElement.classList.add(`rt-${plugin.name}`)
+
+        console.log(`init ${plugin.name}`)
+
+        plugin.init()
         return true
       }
     })

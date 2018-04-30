@@ -293,6 +293,7 @@ var init = function() {
 };
 
 module.exports = {
+  name: 'gmail-legacy',
   active: () => {
     // old gmail
     return (

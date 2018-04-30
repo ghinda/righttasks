@@ -1,6 +1,13 @@
+function init () {
+  var iframe = document.createElement('iframe')
+  iframe.src = 'https://mail.google.com/tasks/ig'
+  iframe.className = 'rt-iframe'
+
+  document.documentElement.appendChild(iframe)
+}
+
 module.exports = {
-  active: () => {
-    return true
-  },
-  init: () => console.log('generic')
+  name: 'generic',
+  active: () => true,
+  init: init
 }

@@ -1,3 +1,14 @@
-.generic {
-  background-color: red;
+.rt-generic {
+  position: relative;
+  margin-right: 200px;
 }
+
+.rt-generic .rt-iframe {
+  position: absolute;
+  top: 0;
+  right: -200px;
+  width: 200px;
+  height: 100%;
+  border: 1px solid red;
+}
+
