@@ -6,8 +6,6 @@
  *
  */
 
-var css = require('./gmail-legacy.css')
-
 // wait for the Gmail UI to load
 // http://anurag-maher.blogspot.ro/2012/12/developing-google-chrome-extension-for.html
 var head;
