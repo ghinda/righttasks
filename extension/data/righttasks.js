@@ -207,12 +207,16 @@ var rightTasks = (function() {
   };
 
   var init = function() {
-
-    // if we're in a gmail pop-up
-    // don't trigger the extension
-    if(document.body.className.indexOf('xE') !== -1) {
+    if(
+      // don't run in gmail pop-ups
+      document.body.className.indexOf('xE') !== -1
+      // or in the new gmail
+      || document.body.hasAttribute('jscontroller')
+    ) {
       return false;
     }
+
+    document.body.className += ' righttasks-enabled';
 
     // cleanup vars
     currentTopPosition = 0;
