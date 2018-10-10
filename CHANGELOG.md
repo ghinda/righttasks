@@ -1,3 +1,7 @@
+## [2.6.8] - 2017-10-10
+
+* Fix extra right-side padding in the new Gmail. RightTasks does not run in the new Gmail.
+
 ## [2.6.7] - 2017-07-29
 
 * Fix broken task list because of changed markup in Google Tasks.
