@@ -6,9 +6,9 @@
   "version": "2.6.8",
 
   "icons": {
-    "16": "data/righttasks-icon-16.png",
-    "48": "data/righttasks-icon-48.png",
-    "128": "data/righttasks-icon-128.png"
+    "16": "images/righttasks-icon-16.png",
+    "48": "images/righttasks-icon-48.png",
+    "128": "images/righttasks-icon-128.png"
   },
 
   "permissions": [
@@ -18,11 +18,11 @@
   "content_scripts": [
     {
       "matches": [ "https://mail.google.com/*" ],
-      "css": [ "data/righttasks.css" ],
-      "js": [ "data/righttasks.js" ]
+      "css": [ "righttasks.css" ],
+      "js": [ "righttasks.js" ]
     }
   ],
 
-  "web_accessible_resources": [ "data/righttasks.css" ]
+  "web_accessible_resources": [ "righttasks.css" ]
 
 }

@@ -4,26 +4,11 @@
 var css = require('./core.css')
 
 var gmailLegacy = require('./plugins/gmail-legacy/gmail-legacy')
-var generic = require('./plugins/generic/generic')
+var gmailMaterial = require('./plugins/gmail-material/gmail-material')
 
 var plugins = [
   gmailLegacy,
-  generic
+  gmailMaterial
 ]
 
-Promise
-  .all(plugins.map((p) => Promise.resolve(p.active())))
-  .then((res) => {
-    res.some((r, index) => {
-      if (r === true) {
-        var plugin = plugins[index]
-        document.documentElement.classList.add(`rt-${plugin.name}`)
-
-        console.log(`init ${plugin.name}`)
-
-        plugin.init()
-        return true
-      }
-    })
-  })
-
+plugins.forEach((p) => p.init())

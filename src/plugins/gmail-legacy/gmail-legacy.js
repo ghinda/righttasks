@@ -243,16 +243,7 @@ var findTasksContainer = function() {
   }
 };
 
-var init = function() {
-  if(
-    // don't run in gmail pop-ups
-    document.body.className.indexOf('xE') !== -1
-    // or in the new gmail
-    || document.body.hasAttribute('jscontroller')
-  ) {
-    return false;
-  }
-
+var startup = () => {
   document.body.classList.add('righttasks-legacy')
 
   // cleanup vars
@@ -292,17 +283,24 @@ var init = function() {
 
   // reposition the widget when the page resizes
   window.addEventListener('resize', position);
+}
 
-};
+var init = function() {
+  if(
+    window.location.hostname !== 'mail.google.com'
+    // don't run in gmail pop-ups
+    || document.body.className.indexOf('xE') !== -1
+    // or in the new gmail
+    || document.body.hasAttribute('jscontroller')
+  ) {
+    return false;
+  }
+
+  waitForGmailToLoad(startup);
+  return true;
+}
 
 module.exports = {
   name: 'gmail-legacy',
-  active: () => {
-    // old gmail
-    return (
-      window.location.hostname === 'mail.google.com'
-      && !document.querySelector('body[jscontroller]')
-    )
-  },
-  init: () => waitForGmailToLoad(init)
+  init: init
 }
