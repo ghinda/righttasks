@@ -6,9 +6,7 @@
  *
  */
 
-/* Don't add the margin in gmail popups
- */
-body.righttasks-legacy:not(.xE) .AO {
+.righttasks-legacy .AO {
   margin-right: 220px;
 }
 
