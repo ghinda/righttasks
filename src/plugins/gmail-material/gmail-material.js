@@ -1,20 +1,27 @@
 var createSettings = require('../../settings')
 var defaultSettings = {
-  appBar: false
+  appBar: false,
+  width: 300
 }
 var settings = null
 
 var pluginClass = 'rt-gmail-material'
 var iframeClass = 'rt-gmail-material-iframe'
-var appBarSelector = '.nH.bAw.nn'
 var btnDisabledClass = 'aT5-aOt-I-JE'
-
-var menuIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>'
-
-var checkIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>'
-
 var hideAppBarClass = 'rt-hide-appbar'
 var dropdownItemActiveClass = 'rt-dropdown-item-active'
+var resizerClass = 'rt-gmail-material-resizer'
+var resizingClass = 'rt-gmail-material-resizing'
+var containerClass = 'rt-gmail-material-container'
+
+var appBarSelector = '.nH.bAw.nn'
+var iframeContainerSelector = '.bq9.buW'
+
+var minWidth = 150
+var maxWidth = 300
+
+var menuIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>'
+var checkIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>'
 
 var appBar = null
 var dropdownMenus = [
@@ -102,6 +109,7 @@ function addDropdown () {
     toggleDropdown(dropdown, true, btn)
   })
   document.body.addEventListener('click', () => toggleDropdown(dropdown))
+  window.addEventListener('blur', () => toggleDropdown(dropdown))
 
   // refresh attributes
   settings.change(() => {
@@ -122,6 +130,57 @@ function triggerClick (element) {
   })
 }
 
+function iframeContainerReady (mutations, observer) {
+  var container = document.querySelector(iframeContainerSelector)
+  if (!container) {
+    return false
+  }
+
+  container.parentNode.classList.add(containerClass)
+
+  var resizer = document.createElement('div')
+  resizer.className = resizerClass
+
+  var width = settings.get('width')
+
+  var setWidth = () => {
+    width = settings.get('width')
+    resizer.parentNode.style.width = `${width}px`
+  }
+
+  settings.change(setWidth)
+
+  var move = false
+  resizer.addEventListener('mousedown', () => move = true)
+  window.addEventListener('mouseup', () => {
+    move = false
+    document.body.classList.remove(resizingClass)
+
+    settings.set('width', width)
+  })
+
+  window.addEventListener('mousemove', (e) => {
+    if (!move) {
+      return
+    }
+
+    document.body.classList.add(resizingClass)
+
+    width = window.innerWidth - e.clientX
+    if (width < minWidth) {
+      width = minWidth
+    } else if (width > maxWidth) {
+      width = maxWidth
+    }
+
+    resizer.parentNode.style.width = `${width}px`
+  })
+
+  container.appendChild(resizer)
+
+  observer.disconnect()
+}
+
 function appBarReady (mutations, observer) {
   appBar = document.querySelector(appBarSelector)
   if (!appBar) {
@@ -135,6 +194,7 @@ function appBarReady (mutations, observer) {
     attributes: true,
     subtree: true
   })
+
   observer.disconnect()
 }
 
@@ -161,6 +221,9 @@ function startup () {
 
   var appBarObserver = new MutationObserver(appBarReady)
   appBarObserver.observe(document.body, {childList: true})
+
+  var iframeObserver = new MutationObserver(iframeContainerReady)
+  iframeObserver.observe(document.body, {childList: true})
 }
 
 function init () {

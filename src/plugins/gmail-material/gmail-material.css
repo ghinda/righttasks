@@ -7,7 +7,54 @@
   display: none;
 }
 
-/* Tasks Iframe
+/* resizer
+ */
+.rt-gmail-material-container {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+}
+
+.rt-gmail-material-container > .nH {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.rt-gmail-material .brC-brG {
+  width: 100%;
+}
+
+.rt-gmail-material .bq9.buW {
+  position: relative;
+  box-shadow: none;
+  width: 300px;
+}
+
+.rt-gmail-material-resizer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 10px;
+  background-color: #eee;
+  z-index: 1;
+
+  opacity: .3;
+  cursor: ew-resize;
+}
+
+.rt-gmail-material-resizer:hover {
+  opacity: 1;
+}
+
+.rt-gmail-material-resizing {
+  pointer-events: none;
+  user-select: none;
+}
+
+/* tasks iframe
  */
 .rt-gmail-material-iframe .kFwPee {
   display: flex;
@@ -20,6 +67,15 @@
 
 .rt-gmail-material-iframe .kFwPee section:last-of-type {
   border-bottom: 0;
+}
+
+.rt-gmail-material-iframe .Sze5Fc,
+.rt-gmail-material-iframe .bckq9c,
+.rt-gmail-material-iframe .CTxcDf,
+.rt-gmail-material-iframe .G4zhSc,
+.rt-gmail-material-iframe .oXBvod {
+  width: 100%;
+  min-width: 0;
 }
 
 /* hide close button
@@ -64,6 +120,7 @@
   position: absolute;
   top: 0;
   left: -100%;
+  padding: 8px 0;
   visibility: hidden;
   background: #fff;
   border-radius: 8px;
@@ -88,7 +145,7 @@
   display: block;
   border: 0;
   background-color: #fff;
-  padding: 16px 60px 16px 16px;
+  padding: 12px 60px 12px 16px;
 
   color: #444;
   cursor: pointer;
@@ -106,8 +163,8 @@
 
 .rt-button-status {
   position: absolute;
-  right: 16px;
-  top: 12px;
+  right: 12px;
+  top: 8px;
 
   fill: #444;
   opacity: 0;
