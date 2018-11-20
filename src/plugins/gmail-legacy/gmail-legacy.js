@@ -125,7 +125,7 @@ var findTasksContainer = function() {
 
     $tasksContainer.parentNode.className += ' gmail-righttasks-container';
 
-    var cssURL = chrome.extension.getURL('righttasks.css');
+    var cssURL = chrome.extension.getURL('content.css');
 
     // get the dom of the tasks iframe
     var getIframeDom = function() {
@@ -301,6 +301,5 @@ var init = function() {
 }
 
 module.exports = {
-  name: 'gmail-legacy',
   init: init
 }
