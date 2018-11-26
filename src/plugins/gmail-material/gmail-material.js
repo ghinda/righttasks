@@ -1,6 +1,7 @@
 var createSettings = require('../../settings')
 var defaultSettings = {
   appBar: false,
+  hidden: false,
   width: 300
 }
 var settings = null
@@ -13,6 +14,7 @@ var dropdownItemActiveClass = 'rt-dropdown-item-active'
 var resizerClass = 'rt-gmail-material-resizer'
 var resizingClass = 'rt-gmail-material-resizing'
 var containerClass = 'rt-gmail-material-container'
+var hiddenClass = 'rt-gmail-material-hidden'
 
 var appBarSelector = '.nH.bAw.nn'
 var iframeContainerSelector = '.bq9.buW'
@@ -48,8 +50,7 @@ var dropdownMenus = [
       return {
         className: 'rt-dropdown-item',
         innerHTML: 'About RightTasks',
-        href: 'http://www.righttasks.com/',
-        target: '_blank'
+        href: 'http://www.righttasks.com/'
       }
     }
   }
@@ -151,6 +152,10 @@ function iframeContainerReady (mutations, observer) {
   settings.change(setWidth)
 
   var move = false
+  var hidden = false
+  resizer.addEventListener('click', () => {
+    settings.set('hidden', !settings.get('hidden'))
+  })
   resizer.addEventListener('mousedown', () => move = true)
   window.addEventListener('mouseup', () => {
     move = false
@@ -160,7 +165,7 @@ function iframeContainerReady (mutations, observer) {
   })
 
   window.addEventListener('mousemove', (e) => {
-    if (!move) {
+    if (!move || hidden) {
       return
     }
 
@@ -198,6 +203,14 @@ function appBarReady (mutations, observer) {
   observer.disconnect()
 }
 
+function setHidden () {
+  if (settings.get('hidden')) {
+    document.body.classList.remove(hiddenClass)
+  } else {
+    document.body.classList.add(hiddenClass)
+  }
+}
+
 function setAppBar () {
   if (settings.get('appBar')) {
     document.body.classList.remove(hideAppBarClass)
@@ -218,6 +231,7 @@ function clickTasks (mutations, observer) {
 
 function startup () {
   document.body.classList.add(pluginClass)
+  settings.change(setHidden)
 
   var appBarObserver = new MutationObserver(appBarReady)
   appBarObserver.observe(document.body, {childList: true})

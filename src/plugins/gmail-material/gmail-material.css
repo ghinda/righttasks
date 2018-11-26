@@ -32,6 +32,14 @@
   width: 300px;
 }
 
+.rt-gmail-material-hidden .bq9.buW {
+  width: 10px !important;
+}
+
+.rt-gmail-material-hidden iframe {
+  display: none;
+}
+
 .rt-gmail-material-resizer {
   position: absolute;
   top: 0;
@@ -47,6 +55,27 @@
 
 .rt-gmail-material-resizer:hover {
   opacity: 1;
+}
+
+.rt-gmail-material-hidden .rt-gmail-material-resizer {
+  background: #f9f9f9;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.rt-gmail-material-hidden .rt-gmail-material-resizer:hover {
+  background: #eee;
+}
+
+.rt-gmail-material-hidden .rt-gmail-material-resizer:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-color: transparent #ccc;
+  border-width: 5px 5px 5px 0;
 }
 
 .rt-gmail-material-resizing {
