@@ -1,3 +1,11 @@
+## [3.0.0] - 2018-11-26
+
+* Added support for the new Gmail: 
+* Hide the Applications Bar from the top right options dropdown.
+* Toggle the tasks sidebar on/off by clicking the gray separator.
+* Resize the sidebar by dragging the separator.
+* Tweaks for a cleaner tasks layout.
+
 ## [2.6.8] - 2017-10-10
 
 * Fix extra right-side padding in the new Gmail. RightTasks does not run in the new Gmail.
