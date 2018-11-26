@@ -3,8 +3,12 @@
 .rt-gmail-material {
 }
 
-.rt-gmail-material.rt-hide-appbar .nH.bAw.nn {
+.rt-gmail-material.rt-hide-appbar .bAw {
   display: none;
+}
+
+.rt-gmail-material .bAw {
+  height: auto !important;
 }
 
 /* resizer
@@ -81,6 +85,7 @@
 .rt-gmail-material-resizing {
   pointer-events: none;
   user-select: none;
+  -moz-user-select: none;
 }
 
 /* tasks iframe

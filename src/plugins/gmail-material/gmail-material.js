@@ -111,12 +111,12 @@ function addDropdown () {
   document.body.addEventListener('click', () => toggleDropdown(dropdown))
   window.addEventListener('blur', () => toggleDropdown(dropdown))
 
-  // refresh attributes
-  settings.change(() => {
+  var refreshAttributes = () => {
     buttons.forEach((btn, i) => {
       setAttributes(btn, dropdownMenus[i].attr())
     })
-  })
+  }
+  settings.change(refreshAttributes)
 }
 
 function iframeStartup () {
@@ -145,9 +145,10 @@ function iframeContainerReady (mutations, observer) {
 
   var setWidth = () => {
     width = settings.get('width')
-    resizer.parentNode.style.width = `${width}px`
+    container.style.width = `${width}px`
   }
 
+  setWidth()
   settings.change(setWidth)
 
   var move = false
@@ -177,7 +178,7 @@ function iframeContainerReady (mutations, observer) {
       width = maxWidth
     }
 
-    resizer.parentNode.style.width = `${width}px`
+    container.style.width = `${width}px`
   })
 
   container.appendChild(resizer)
@@ -191,6 +192,7 @@ function appBarReady (mutations, observer) {
     return false
   }
 
+  setAppBar()
   settings.change(setAppBar)
 
   var btnObserver = new MutationObserver(clickTasks)
@@ -204,9 +206,9 @@ function appBarReady (mutations, observer) {
 
 function setHidden () {
   if (settings.get('hidden')) {
-    document.body.classList.remove(hiddenClass)
-  } else {
     document.body.classList.add(hiddenClass)
+  } else {
+    document.body.classList.remove(hiddenClass)
   }
 }
 
@@ -243,6 +245,7 @@ function clickTasks (mutations, observer) {
 
 function startup () {
   document.body.classList.add(pluginClass)
+  setHidden()
   settings.change(setHidden)
 
   var appBarObserver = new MutationObserver(appBarReady)
