@@ -8,7 +8,6 @@ var settings = null
 
 var pluginClass = 'rt-gmail-material'
 var iframeClass = 'rt-gmail-material-iframe'
-var btnDisabledClass = 'aT5-aOt-I-JE'
 var hideAppBarClass = 'rt-hide-appbar'
 var dropdownItemActiveClass = 'rt-dropdown-item-active'
 var resizerClass = 'rt-gmail-material-resizer'
@@ -17,7 +16,7 @@ var containerClass = 'rt-gmail-material-container'
 var hiddenClass = 'rt-gmail-material-hidden'
 
 var appBarSelector = '.nH.bAw.nn'
-var iframeContainerSelector = '.bq9.buW'
+var iframeContainerSelector = '.bq9'
 
 var minWidth = 150
 var maxWidth = 300
@@ -221,11 +220,24 @@ function setAppBar () {
 
 function clickTasks (mutations, observer) {
   var btn = appBar.querySelector('div[style*="/tasks2"]').parentNode
-  if (!btn || btn.classList.contains(btnDisabledClass)) {
+  var isDisabled = btn.getAttribute('aria-disabled')
+  if (
+    !btn
+    || isDisabled === null
+    || isDisabled === 'true'
+  ) {
     return false
   }
 
-  triggerClick(btn)
+  // wait a sec for gmail to select the button,
+  // if it was previously selected.
+  setTimeout(() => {
+    var isSelected = btn.getAttribute('aria-selected')
+    if (isSelected !== 'true') {
+      return triggerClick(btn)
+    }
+  }, 1000)
+
   observer.disconnect()
 }
 
