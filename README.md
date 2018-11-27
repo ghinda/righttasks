@@ -1,5 +1,4 @@
-RightTasks for Gmail™ [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=ghinda&url=https://github.com/ghinda/gmail-righttasks&title=gmail-righttasks&language=javascript&tags=github&category=software)
-=======================================
+# RightTasks for Gmail™
 
 [RightTasks for Chrome](https://chrome.google.com/webstore/detail/right-tasks-for-gmail/hgniockidojcaaolfcbbkaaakbjdebpe)
 
@@ -7,36 +6,33 @@ RightTasks for Gmail™ [![Flattr this git repo](http://api.flattr.com/button/fl
 
 [RightTasks for Opera](https://addons.opera.com/en/extensions/details/righttasks-for-gmailtm/)
 
-RightTasks is a browser extension that puts your Google Tasks in a sidebar in Gmail, like in Google Calendar.
+Improved task management in Gmail™. 
 
-This is especially useful if you keep Gmail open and want to see your tasks at all times.
+See your tasks at all times, without getting in the way.
 
-You can use all the features available in the official tasks widget, such as:
-* "Create a task based on the open message", which you can use from the "More > Add to Tasks" menu or with the "SHIFT + T" keyboard shortcut while viewing an email
-* The "G then K" keyboard shortcut, which shifts the cursor from Gmail to Tasks.
+RightTasks shows your Google Tasks sidebar with new features:
 
+* Hide the Applications bar for less distraction.
+* Resize the sidebar to fit everything, or take up less space.
+* Hide and show the sidebar with a single click.
+* Visual tweaks for a clear view of your tasks.
 
-Development
------------
+All the official Google Tasks features, like keyboard shortcuts or turning emails into tasks, are still available.
 
-* Run the extension in Chrome by loading the `/extension` folder as an unpacked extension.
+Make sure to reload Gmail after installing the extension.
 
-
-Build
------
-
-* Build the extension by packing the contents of the `/extension` folder as a zip file.
+We do not collect any of your personal data. See our privacy policy:
+https://github.com/ghinda/righttasks/wiki/Privacy-policy
 
 
-Contributors
-------------
+
+
+## Contributors
 
 * [kenny3794](https://github.com/kenny3794)
 
 
-License
--------
+## License
 
 RightTasks is free software under the GPLv3. For more
 information, see <https://www.gnu.org/copyleft/gpl.html> or the accompanying LICENSE file.
-
