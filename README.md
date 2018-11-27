@@ -24,7 +24,7 @@ Make sure to reload Gmail after installing the extension.
 We do not collect any of your personal data. See our privacy policy:
 https://github.com/ghinda/righttasks/wiki/Privacy-policy
 
-
+Visit www.righttasks.com for updates.
 
 
 ## Contributors
