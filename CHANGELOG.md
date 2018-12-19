@@ -1,3 +1,8 @@
+## [3.0.1] - 2018-12-19
+
+* Fix issues with covering up add-task and he first task, when having lots of tasks or on small screens. 
+* Fix issues with sometimes not loading the css in the tasks iframe.
+
 ## [3.0.0] - 2018-11-26
 
 * Added support for the new Gmail: 

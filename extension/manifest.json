@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "RightTasks for Gmail™",
   "description": "Improved task management in Gmail™",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "icons": {
     "16": "images/righttasks-icon-16.png",
     "48": "images/righttasks-icon-48.png",
@@ -11,13 +11,13 @@
   "permissions": [
     "storage",
     "https://mail.google.com/",
-    "https://tasks.google.com/embed/"
+    "https://tasks.google.com/"
   ],
   "content_scripts": [
     {
       "matches": [
         "https://mail.google.com/*",
-        "https://tasks.google.com/embed/*"
+        "https://tasks.google.com/*"
       ],
       "all_frames": true,
       "css": [ "content.css" ],

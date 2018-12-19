@@ -95,6 +95,10 @@
   flex-direction: column;
 }
 
+.rt-gmail-material-iframe .kFwPee > * {
+  flex-shrink: 0;
+}
+
 .rt-gmail-material-iframe .kFwPee section:nth-last-of-type(2) {
   flex: 1;
 }
