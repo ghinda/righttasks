@@ -1,3 +1,7 @@
+## [3.1.0] - 2019-03-03
+
+* Allow enlarging the tasks sidebar up to 600px.
+
 ## [3.0.1] - 2018-12-19
 
 * Fix issues with covering up add-task and he first task, when having lots of tasks or on small screens. 

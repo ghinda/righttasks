@@ -24,6 +24,7 @@
 .rt-gmail-material-container > .nH {
   flex-grow: 1;
   flex-shrink: 1;
+  overflow: hidden;
 }
 
 .rt-gmail-material .brC-brG {
