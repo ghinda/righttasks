@@ -1,3 +1,7 @@
+## [3.1.1] - 2019-07-24
+
+* Fix issues with scrolling the task list.
+
 ## [3.1.0] - 2019-03-03
 
 * Allow enlarging the tasks sidebar up to 600px.

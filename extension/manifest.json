@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "RightTasks for Gmail™",
   "description": "Improved task management in Gmail™",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "icons": {
     "16": "images/righttasks-icon-16.png",
     "48": "images/righttasks-icon-48.png",
