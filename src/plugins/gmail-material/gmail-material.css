@@ -91,23 +91,6 @@
 
 /* tasks iframe
  */
-.rt-gmail-material-iframe .kFwPee {
-  display: flex;
-  flex-direction: column;
-}
-
-.rt-gmail-material-iframe .kFwPee > * {
-  flex-shrink: 0;
-}
-
-.rt-gmail-material-iframe .kFwPee section:nth-last-of-type(2) {
-  flex: 1;
-}
-
-.rt-gmail-material-iframe .kFwPee section:last-of-type {
-  border-bottom: 0;
-}
-
 .rt-gmail-material-iframe .Sze5Fc,
 .rt-gmail-material-iframe .bckq9c,
 .rt-gmail-material-iframe .CTxcDf,
