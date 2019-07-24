@@ -31,13 +31,12 @@
   width: 100%;
 }
 
-.rt-gmail-material .bq9.buW {
+.rt-gmail-material .bq9 {
   position: relative;
-  box-shadow: none;
   width: 300px;
 }
 
-.rt-gmail-material-hidden .bq9.buW {
+.rt-gmail-material-hidden .bq9 {
   width: 10px !important;
 }
 
