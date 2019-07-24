@@ -1,3 +1,8 @@
+## [3.1.2] - 2019-07-24
+
+* Fix issues with saving settings (Chrome extension API polyfill).
+* Fix issues with the task list not toggling on-off on certain accounts.
+
 ## [3.1.1] - 2019-07-24
 
 * Fix issues with scrolling the task list.
