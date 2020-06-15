@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/ghinda/righttasks#readme",
   "devDependencies": {
-    "browserify-css": "^0.14.0",
-    "watchify": "^3.11.0"
+    "browserify-css": "^0.15.0",
+    "watchify": "^3.11.1"
   }
 }

@@ -1,3 +1,8 @@
+## [3.1.3] - 2020-06-15
+
+* Fix issues with the menu button not showing up.
+* Fix issues with the Gmail AppBar still taking up space when hidden.
+
 ## [3.1.2] - 2019-07-24
 
 * Fix issues with saving settings (Chrome extension API polyfill).

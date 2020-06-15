@@ -3,7 +3,7 @@
 .rt-gmail-material {
 }
 
-.rt-gmail-material.rt-hide-appbar .bAw {
+.rt-gmail-material.rt-hide-appbar [jsaction^='CyXzrf'] {
   display: none;
 }
 
@@ -88,26 +88,19 @@
   -moz-user-select: none;
 }
 
-/* tasks iframe
- */
-.rt-gmail-material-iframe .Sze5Fc,
-.rt-gmail-material-iframe .bckq9c,
-.rt-gmail-material-iframe .CTxcDf,
-.rt-gmail-material-iframe .G4zhSc,
-.rt-gmail-material-iframe .oXBvod {
-  width: 100%;
-  min-width: 0;
-}
-
 /* hide close button
  */
-.rt-gmail-material-iframe .B9yICe > .mUbCce:last-of-type {
+.rt-gmail-material-iframe [jsname='plIjzf'] {
   display: none;
 }
 
 /* button
  */
 .rt-gmail-material-iframe .rt-button {
+  position: absolute;
+  top: 1em;
+  right: .9em;
+  z-index: 2;
   display: inline-block;
   width: 40px;
   height: 40px;

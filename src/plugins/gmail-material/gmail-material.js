@@ -83,8 +83,8 @@ function addDropdown () {
   btn.innerHTML = menuIcon
   btn.className = 'rt-button'
 
-  var header = document.body.querySelector('.B9yICe')
-  header.appendChild(btn)
+  var appContainer = document.querySelector('#yDmH0d')
+  appContainer.appendChild(btn)
 
   var dropdown = document.createElement('div')
   dropdown.className = 'rt-dropdown'
