@@ -1,14 +1,7 @@
 /* Gmail Material
  */
-.rt-gmail-material {
-}
-
-.rt-gmail-material.rt-hide-appbar [jsaction^='CyXzrf'] {
+.rt-gmail-material.rt-hide-appbar .rt-gmail-appbar > [jsaction] > [jsaction] {
   display: none;
-}
-
-.rt-gmail-material .bAw {
-  height: auto !important;
 }
 
 /* resizer
@@ -83,6 +76,10 @@
 }
 
 .rt-gmail-material-resizing {
+  cursor: ew-resize;
+}
+
+.rt-gmail-material-resizing > div {
   pointer-events: none;
   user-select: none;
   -moz-user-select: none;

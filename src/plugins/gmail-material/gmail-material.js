@@ -15,10 +15,11 @@ var resizingClass = 'rt-gmail-material-resizing'
 var containerClass = 'rt-gmail-material-container'
 var hiddenClass = 'rt-gmail-material-hidden'
 
-var appBarSelector = '.nH.bAw.nn'
+var appBarSelector = '[role="complementary"]'
 var iframeContainerSelector = '.bq9'
+var appBarCustomClass = 'rt-gmail-appbar'
 
-var minWidth = 150
+var minWidth = 200
 var maxWidth = 600
 
 var menuIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>'
@@ -156,7 +157,9 @@ function iframeContainerReady (mutations, observer) {
   resizer.addEventListener('click', () => {
     settings.set('hidden', !settings.get('hidden'))
   })
-  resizer.addEventListener('mousedown', () => move = true)
+  resizer.addEventListener('mousedown', () => {
+    move = true
+  })
   window.addEventListener('mouseup', () => {
     move = false
     document.body.classList.remove(resizingClass)
@@ -164,6 +167,7 @@ function iframeContainerReady (mutations, observer) {
     settings.set('width', width)
   })
 
+  let raf
   window.addEventListener('mousemove', (e) => {
     if (!move || hidden) {
       return
@@ -171,14 +175,19 @@ function iframeContainerReady (mutations, observer) {
 
     document.body.classList.add(resizingClass)
 
-    width = window.innerWidth - e.clientX
-    if (width < minWidth) {
-      width = minWidth
-    } else if (width > maxWidth) {
-      width = maxWidth
+    if (raf) {
+      window.cancelAnimationFrame(raf)
     }
+    raf = window.requestAnimationFrame(() => {
+      width = window.innerWidth - e.clientX
+      if (width < minWidth) {
+        width = minWidth
+      } else if (width > maxWidth) {
+        width = maxWidth
+      }
 
-    container.style.width = `${width}px`
+      container.style.width = `${width}px`
+    })
   })
 
   container.appendChild(resizer)
@@ -213,6 +222,8 @@ function setHidden () {
 }
 
 function setAppBar () {
+  appBar?.closest?.('.nH')?.classList?.add?.(appBarCustomClass)
+
   if (settings.get('appBar')) {
     document.body.classList.remove(hideAppBarClass)
   } else {
@@ -221,7 +232,7 @@ function setAppBar () {
 }
 
 function clickTasks (mutations, observer) {
-  var btn = appBar.querySelector('div[style*="/tasks2"]').parentNode
+  var btn = appBar.querySelector('div[style*="/tasks_20"]').parentNode
   var isDisabled = btn.getAttribute('aria-disabled')
   if (
     !btn

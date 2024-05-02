@@ -8,4 +8,5 @@ node_modules/
 extension/content.css
 extension/content.js
 extension/background.js
+extension/manifest.json
 

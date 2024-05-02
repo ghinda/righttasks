@@ -1,3 +1,9 @@
+## [3.2.0] - 2020-05-02
+
+* Add support for Gmail May 2024.
+* Fix issues with blocking the Quick Settings button.
+* Upgrade to Manifest v3.
+
 ## [3.1.3] - 2020-06-15
 
 * Fix issues with the menu button not showing up.
